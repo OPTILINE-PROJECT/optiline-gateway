@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import officeTeam from "@/assets/office-team.jpg";
-import madagascarMap from "@/assets/madagascar-map.jpg";
+import worldNetworkMap from "@/assets/world-network-map.jpg";
 import { useLanguage } from "@/i18n/language";
 import {
   CTASection,
@@ -341,14 +341,30 @@ function Index() {
               </Link>
             </div>
             <div className="md:col-span-5">
-              <img
-                src={madagascarMap}
-                loading="lazy"
-                width={1088}
-                height={1088}
-                alt="Map showing Madagascar connected to Europe and international markets"
-                className="aspect-square w-full rounded-xl object-cover outline outline-1 -outline-offset-1 outline-black/5"
-              />
+              <div className="overflow-hidden rounded-xl border border-line bg-navy shadow-elevate">
+                <img
+                  src={worldNetworkMap}
+                  loading="lazy"
+                  width={1536}
+                  height={1024}
+                  alt="World map showing Madagascar connected to international business markets"
+                  className="aspect-[3/2] w-full object-cover"
+                />
+                <div className="grid grid-cols-3 border-t border-navy-foreground/15 bg-navy px-4 py-4 text-center text-navy-foreground">
+                  <div className="border-r border-navy-foreground/15 px-2">
+                    <span className="mx-auto mb-2 block size-2 rounded-full bg-accent animate-brandglow" />
+                    <p className="text-[11px] font-semibold">Madagascar</p>
+                  </div>
+                  <div className="border-r border-navy-foreground/15 px-2">
+                    <span className="mx-auto mb-2 block size-2 rounded-full bg-blue" />
+                    <p className="text-[11px] font-semibold">Europe</p>
+                  </div>
+                  <div className="px-2">
+                    <span className="mx-auto mb-2 block size-2 rounded-full bg-navy-foreground/70" />
+                    <p className="text-[11px] font-semibold">Global markets</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
