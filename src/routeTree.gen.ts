@@ -10,33 +10,231 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RequestAVisitRouteImport } from './routes/request-a-visit'
+import { Route as RequestInformationRouteImport } from './routes/request-information'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as WhyMadagascarRouteImport } from './routes/why-madagascar'
+import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
+import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestAVisitRoute = RequestAVisitRouteImport.update({
+  id: '/request-a-visit',
+  path: '/request-a-visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestInformationRoute = RequestInformationRouteImport.update({
+  id: '/request-information',
+  path: '/request-information',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyMadagascarRoute = WhyMadagascarRouteImport.update({
+  id: '/why-madagascar',
+  path: '/why-madagascar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsSlugRoute = InsightsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => InsightsRoute,
+} as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/careers': typeof CareersRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/faq': typeof FaqRoute
+  '/industries': typeof IndustriesRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/request-a-visit': typeof RequestAVisitRoute
+  '/request-information': typeof RequestInformationRoute
+  '/solutions': typeof SolutionsRoute
+  '/terms': typeof TermsRoute
+  '/why-madagascar': typeof WhyMadagascarRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/careers': typeof CareersRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/faq': typeof FaqRoute
+  '/industries': typeof IndustriesRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/request-a-visit': typeof RequestAVisitRoute
+  '/request-information': typeof RequestInformationRoute
+  '/solutions': typeof SolutionsRoute
+  '/terms': typeof TermsRoute
+  '/why-madagascar': typeof WhyMadagascarRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/careers': typeof CareersRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/faq': typeof FaqRoute
+  '/industries': typeof IndustriesRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/request-a-visit': typeof RequestAVisitRoute
+  '/request-information': typeof RequestInformationRoute
+  '/solutions': typeof SolutionsRoute
+  '/terms': typeof TermsRoute
+  '/why-madagascar': typeof WhyMadagascarRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/careers'
+    | '/contact'
+    | '/cookie-policy'
+    | '/faq'
+    | '/industries'
+    | '/insights'
+    | '/privacy-policy'
+    | '/request-a-visit'
+    | '/request-information'
+    | '/solutions'
+    | '/terms'
+    | '/why-madagascar'
+    | '/insights/$slug'
+    | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/careers'
+    | '/contact'
+    | '/cookie-policy'
+    | '/faq'
+    | '/industries'
+    | '/insights'
+    | '/privacy-policy'
+    | '/request-a-visit'
+    | '/request-information'
+    | '/solutions'
+    | '/terms'
+    | '/why-madagascar'
+    | '/insights/$slug'
+    | '/services/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/careers'
+    | '/contact'
+    | '/cookie-policy'
+    | '/faq'
+    | '/industries'
+    | '/insights'
+    | '/privacy-policy'
+    | '/request-a-visit'
+    | '/request-information'
+    | '/solutions'
+    | '/terms'
+    | '/why-madagascar'
+    | '/insights/$slug'
+    | '/services/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CareersRoute: typeof CareersRoute
+  ContactRoute: typeof ContactRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
+  FaqRoute: typeof FaqRoute
+  IndustriesRoute: typeof IndustriesRoute
+  InsightsRoute: typeof InsightsRouteWithChildren
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RequestAVisitRoute: typeof RequestAVisitRoute
+  RequestInformationRoute: typeof RequestInformationRoute
+  SolutionsRoute: typeof SolutionsRoute
+  TermsRoute: typeof TermsRoute
+  WhyMadagascarRoute: typeof WhyMadagascarRoute
+  ServicesSlugRoute: typeof ServicesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +246,142 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-a-visit': {
+      id: '/request-a-visit'
+      path: '/request-a-visit'
+      fullPath: '/request-a-visit'
+      preLoaderRoute: typeof RequestAVisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-information': {
+      id: '/request-information'
+      path: '/request-information'
+      fullPath: '/request-information'
+      preLoaderRoute: typeof RequestInformationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-madagascar': {
+      id: '/why-madagascar'
+      path: '/why-madagascar'
+      fullPath: '/why-madagascar'
+      preLoaderRoute: typeof WhyMadagascarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/$slug': {
+      id: '/insights/$slug'
+      path: '/$slug'
+      fullPath: '/insights/$slug'
+      preLoaderRoute: typeof InsightsSlugRouteImport
+      parentRoute: typeof InsightsRoute
+    }
+    '/services/$slug': {
+      id: '/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface InsightsRouteChildren {
+  InsightsSlugRoute: typeof InsightsSlugRoute
+}
+
+const InsightsRouteChildren: InsightsRouteChildren = {
+  InsightsSlugRoute: InsightsSlugRoute,
+}
+
+const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
+  InsightsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CareersRoute: CareersRoute,
+  ContactRoute: ContactRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
+  FaqRoute: FaqRoute,
+  IndustriesRoute: IndustriesRoute,
+  InsightsRoute: InsightsRouteWithChildren,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RequestAVisitRoute: RequestAVisitRoute,
+  RequestInformationRoute: RequestInformationRoute,
+  SolutionsRoute: SolutionsRoute,
+  TermsRoute: TermsRoute,
+  WhyMadagascarRoute: WhyMadagascarRoute,
+  ServicesSlugRoute: ServicesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
