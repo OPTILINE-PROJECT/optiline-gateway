@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
+import { Logo } from "./Logo";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -9,13 +10,8 @@ export function Footer() {
     <footer className="border-t-4 border-accent bg-navy text-navy-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-12">
         <div className="md:col-span-4">
-          <div className="mb-4 flex items-center gap-2.5">
-            <span className="grid size-6 place-items-center rounded-[5px] bg-navy">
-              <span className="size-2 rounded-full bg-accent" />
-            </span>
-            <span className="text-[15px] font-extrabold tracking-tight text-navy-foreground">
-              OPTILINE<span className="font-medium text-navy-foreground/60"> MADA</span>
-            </span>
+          <div className="mb-4">
+            <Logo inverted />
           </div>
           <p className="text-[15px] font-semibold text-navy-foreground">{site.tagline}</p>
           <p className="mt-3 max-w-[34ch] text-[13px] text-navy-foreground/60">{t("footer.blurb")}</p>
