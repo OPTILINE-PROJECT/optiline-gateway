@@ -39,6 +39,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -52,7 +53,10 @@ function Index() {
     <>
       <div className="mx-auto max-w-6xl px-6">
         {/* HERO */}
-        <section className="grid items-center gap-10 pb-16 pt-16 md:grid-cols-12 md:gap-8 md:pb-20 md:pt-24">
+        <section className="relative grid items-center gap-10 overflow-hidden pb-16 pt-16 md:grid-cols-12 md:gap-10 md:pb-20 md:pt-24">
+          <div className="absolute left-0 top-0 h-1 w-28 bg-coral" />
+          <div className="absolute left-28 top-0 h-1 w-20 bg-sun" />
+          <div className="absolute left-48 top-0 h-1 w-36 bg-accent" />
           <div className="animate-rise md:col-span-7">
             <div className="mb-7 flex flex-wrap items-center gap-3 text-[11px] font-medium uppercase tracking-[0.18em]">
               <span className="size-1.5 rounded-full bg-accent animate-brandglow" />
@@ -71,7 +75,7 @@ function Index() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link
                 to="/request-information"
-                className="rounded-md bg-navy px-6 py-3.5 text-[15px] font-semibold text-navy-foreground ring-1 ring-black/5 transition-colors hover:bg-blue"
+                className="rounded-md bg-navy px-6 py-3.5 text-[15px] font-semibold text-navy-foreground shadow-elevate transition-colors hover:bg-blue"
               >
                 {t("cta.buildTeam")}
               </Link>
@@ -84,13 +88,20 @@ function Index() {
             </div>
           </div>
           <div className="animate-rise md:col-span-5 [animation-delay:120ms]">
-            <img
-              src={officeTeam}
-              width={1024}
-              height={1280}
-              alt="Professionals working at modern workstations in an open-plan office"
-              className="aspect-[4/5] w-full rounded-xl object-cover outline outline-1 -outline-offset-1 outline-black/5"
-            />
+            <div className="relative pb-5 pl-5">
+              <span className="absolute bottom-0 left-0 h-3/5 w-3/5 rounded-xl bg-accent" />
+              <img
+                src={officeTeam}
+                width={1024}
+                height={1280}
+                alt="Professionals working at modern workstations in an open-plan office"
+                className="relative aspect-[4/5] w-full rounded-xl object-cover shadow-elevate"
+              />
+              <div className="absolute bottom-10 left-0 border-l-4 border-coral bg-navy px-5 py-4 text-navy-foreground shadow-elevate">
+                <p className="font-mono text-[11px] uppercase text-accent">Madagascar</p>
+                <p className="mt-1 text-[14px] font-bold">Talent connected to your business</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -113,7 +124,7 @@ function Index() {
         </div>
 
         {/* WHY OPTILINE */}
-        <section className="py-20 md:py-24">
+        <section className="section-wash-blue py-20 md:py-24">
           <SectionHeading
             eyebrow="(a) — Why Optiline Mada"
             title="Everything You Need to Build Your Team in Madagascar"
@@ -127,18 +138,21 @@ function Index() {
         </section>
 
         {/* SOLUTIONS */}
-        <section className="py-4 md:py-8">
+        <section className="py-16 md:py-20">
           <SectionHeading
             eyebrow="(b) — Our solutions"
             title="Flexible Outsourcing Solutions"
             className="mb-12"
           />
           <div className="grid gap-4 lg:grid-cols-3">
-            {solutions.map((s) => (
+            {solutions.map((s, index) => (
               <div
                 key={s.slug}
-                className="flex flex-col rounded-xl border border-line bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-elevate"
+                className={`relative flex flex-col overflow-hidden rounded-xl border border-line p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-elevate ${
+                  index === 0 ? "bg-blue/10" : index === 1 ? "bg-mint/55" : "bg-sun/15"
+                }`}
               >
+                <span className={`absolute inset-x-0 top-0 h-1 ${index === 0 ? "bg-blue" : index === 1 ? "bg-accent" : "bg-coral"}`} />
                 <h3 className="text-[19px] font-bold tracking-tight text-foreground">{s.title}</h3>
                 <p className="mt-3 text-[14px] leading-relaxed text-muted-foreground">{s.short}</p>
                 <ul className="mt-5 flex flex-wrap gap-1.5">
@@ -164,7 +178,7 @@ function Index() {
         </section>
 
         {/* WE TAKE CARE OF EVERYTHING */}
-        <section className="py-20 md:py-24">
+        <section className="section-wash-warm py-20 md:py-24">
           <SectionHeading
             eyebrow="(c) — Fully managed"
             title="You Focus on Your Business. We Take Care of the Rest."
@@ -186,7 +200,11 @@ function Index() {
         {/* OFFER VISUALISATION */}
         <section className="pb-20 md:pb-24">
           <div className="relative overflow-hidden rounded-2xl bg-navy px-8 py-14 text-navy-foreground md:px-12 md:py-16">
-            <div className="absolute -right-16 -top-16 size-64 rounded-full bg-accent/20 blur-3xl" />
+            <div className="absolute inset-x-0 top-0 flex h-2">
+              <span className="w-1/2 bg-blue" />
+              <span className="w-1/3 bg-accent" />
+              <span className="flex-1 bg-coral" />
+            </div>
             <div className="relative mb-12 max-w-2xl">
               <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
                 (d) — How it works
@@ -242,7 +260,7 @@ function Index() {
         </section>
 
         {/* INFRASTRUCTURE */}
-        <section className="border-t border-border py-20 md:py-24">
+        <section className="section-wash-blue border-t border-border py-20 md:py-24">
           <SectionHeading
             eyebrow="(e) — Infrastructure"
             title="Built for Reliable Operations"
@@ -269,7 +287,7 @@ function Index() {
         </section>
 
         {/* TALENT */}
-        <section className="py-4 md:py-8">
+        <section className="py-16 md:py-20">
           <SectionHeading
             eyebrow="(f) — Our talent"
             title="The People Behind Your Operations"
@@ -280,7 +298,7 @@ function Index() {
               <Pill key={p}>{p}</Pill>
             ))}
           </div>
-          <div className="mt-8 flex flex-col gap-4 rounded-xl border border-line bg-accent/6 p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col gap-4 rounded-xl border border-accent/30 bg-mint/55 p-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-[16px] font-bold tracking-tight text-foreground">
                 Need a specific profile?
@@ -299,7 +317,7 @@ function Index() {
         </section>
 
         {/* WHY MADAGASCAR */}
-        <section className="py-20 md:py-24">
+        <section className="section-wash-mint py-20 md:py-24">
           <div className="grid items-center gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <Eyebrow>(g) — Why Madagascar</Eyebrow>
@@ -312,7 +330,7 @@ function Index() {
                 international outsourcing.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3 text-[13px] font-semibold">
-                <span className="rounded-md border border-line px-3.5 py-2 text-foreground">Europe</span>
+                <span className="rounded-md border border-blue/30 bg-blue/10 px-3.5 py-2 text-foreground">Europe</span>
                 <span className="relative h-px w-8 bg-line">
                   <span className="absolute -top-1 left-1/2 size-2 -translate-x-1/2 rounded-full bg-accent animate-brandglow" />
                 </span>
@@ -322,7 +340,7 @@ function Index() {
                 <span className="relative h-px w-8 bg-line">
                   <span className="absolute -top-1 left-1/2 size-2 -translate-x-1/2 rounded-full bg-blue" />
                 </span>
-                <span className="rounded-md border border-line px-3.5 py-2 text-foreground">
+                <span className="rounded-md border border-coral/30 bg-coral/10 px-3.5 py-2 text-foreground">
                   International Markets
                 </span>
               </div>
@@ -377,8 +395,9 @@ function Index() {
             className="mb-12"
           />
           <ol className="grid gap-4 md:grid-cols-5">
-            {howItWorks.map((s) => (
-              <li key={s.n} className="rounded-xl border border-line bg-card p-5">
+            {howItWorks.map((s, index) => (
+              <li key={s.n} className={`relative overflow-hidden rounded-xl border border-line p-5 ${index % 3 === 0 ? "bg-blue/8" : index % 3 === 1 ? "bg-mint/50" : "bg-sun/12"}`}>
+                <span className={`absolute inset-x-0 top-0 h-1 ${index % 3 === 0 ? "bg-blue" : index % 3 === 1 ? "bg-accent" : "bg-coral"}`} />
                 <span className="font-mono text-[12px] text-blue">{s.n}</span>
                 <h3 className="mt-2 text-[15px] font-bold tracking-tight text-foreground">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{s.text}</p>
@@ -388,15 +407,15 @@ function Index() {
         </section>
 
         {/* TEAM SIZES */}
-        <section className="pb-20 md:pb-24">
+        <section className="section-wash-warm py-20 md:py-24">
           <SectionHeading
             eyebrow="(i) — Flexible team sizes"
             title="From One Specialist to an Entire Operations Team"
             className="mb-10"
           />
           <div className="grid gap-4 md:grid-cols-3">
-            {teamSizes.map((s) => (
-              <div key={s.title} className="rounded-xl border border-line bg-navy/5 p-6">
+            {teamSizes.map((s, index) => (
+              <div key={s.title} className={`rounded-xl border border-line p-6 ${index === 0 ? "bg-blue/10" : index === 1 ? "bg-mint/55" : "bg-coral/8"}`}>
                 <p className="font-mono text-[13px] text-blue">{s.range}</p>
                 <h3 className="mt-2 text-[18px] font-bold tracking-tight text-foreground">{s.title}</h3>
                 <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">{s.text}</p>
@@ -406,7 +425,7 @@ function Index() {
         </section>
 
         {/* INDUSTRIES */}
-        <section className="border-t border-border py-16 md:py-20">
+        <section className="border-t border-border py-20 md:py-24">
           <div className="mb-10">
             <Eyebrow>(j) — Industries</Eyebrow>
             <h2 className="text-balance text-[clamp(1.7rem,3vw,2.4rem)] font-extrabold leading-tight tracking-tight text-foreground">
@@ -414,11 +433,11 @@ function Index() {
             </h2>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {industries.slice(0, 8).map((i) => (
+            {industries.slice(0, 8).map((i, index) => (
               <Link
                 key={i.name}
                 to="/industries"
-                className="rounded-lg border border-line bg-card p-4 transition-colors hover:border-accent/40 hover:bg-paper"
+                className={`border-l-4 rounded-lg border border-line p-4 transition-colors hover:-translate-y-0.5 hover:shadow-elevate ${index % 4 === 0 ? "border-l-blue bg-blue/8" : index % 4 === 1 ? "border-l-accent bg-mint/45" : index % 4 === 2 ? "border-l-coral bg-coral/8" : "border-l-sun bg-sun/12"}`}
               >
                 <span className="block text-[15px] font-semibold tracking-tight text-foreground">
                   {i.name}
@@ -430,7 +449,7 @@ function Index() {
         </section>
 
         {/* TRUST + STATS */}
-        <section className="py-20 md:py-24">
+        <section className="section-wash-blue py-20 md:py-24">
           <SectionHeading
             eyebrow="(k) — Trust"
             title="Why Companies Choose Optiline Mada"

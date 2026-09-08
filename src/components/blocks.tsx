@@ -31,9 +31,15 @@ export function SectionHeading({
 }
 
 const toneMap = {
-  navy: "bg-navy/5 hover:shadow-elevate",
-  blue: "bg-blue/6 hover:shadow-elevate",
-  accent: "bg-accent/6 hover:shadow-elevate",
+  navy: "bg-navy/6 hover:shadow-elevate",
+  blue: "bg-blue/10 hover:shadow-elevate",
+  accent: "bg-mint/55 hover:shadow-elevate",
+} as const;
+
+const toneBarMap = {
+  navy: "bg-navy",
+  blue: "bg-blue",
+  accent: "bg-accent",
 } as const;
 
 export function FeatureCard({
@@ -47,8 +53,9 @@ export function FeatureCard({
 }) {
   return (
     <div
-      className={`rounded-xl border border-line p-6 ring-1 ring-black/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 ${toneMap[tone]}`}
+      className={`relative overflow-hidden rounded-xl border border-line p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 ${toneMap[tone]}`}
     >
+      <span className={`absolute inset-x-0 top-0 h-1 ${toneBarMap[tone]}`} />
       <div className="mb-5 grid size-9 place-items-center rounded-lg border border-navy/15 bg-navy/8">
         <span
           className={`size-2.5 rounded-full ${
@@ -80,7 +87,7 @@ export function PageHero({
   intro?: string;
 }) {
   return (
-    <section className="border-b border-border py-16 md:py-20">
+    <section className="section-wash-blue border-b border-border py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="animate-rise max-w-3xl">
           <Eyebrow>{eyebrow}</Eyebrow>
@@ -109,8 +116,10 @@ export function CTASection({
   return (
     <section className="py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-navy px-8 py-14 text-navy-foreground md:px-14 md:py-16">
-          <div className="absolute -right-16 -top-16 size-64 rounded-full bg-accent/20 blur-3xl" />
+        <div className="relative overflow-hidden rounded-2xl bg-navy px-8 py-14 text-navy-foreground shadow-elevate md:px-14 md:py-16">
+          <div className="absolute right-0 top-0 h-2 w-1/3 bg-accent" />
+          <div className="absolute right-1/3 top-0 h-2 w-1/6 bg-blue" />
+          <div className="absolute right-1/2 top-0 h-2 w-1/12 bg-coral" />
           <div className="relative max-w-2xl">
             <h2 className="text-balance text-[clamp(2rem,4vw,3rem)] font-extrabold leading-tight tracking-tight">
               {title ?? t("final.title")}
