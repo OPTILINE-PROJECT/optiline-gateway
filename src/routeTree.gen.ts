@@ -13,12 +13,15 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as RequestAVisitRouteImport } from './routes/request-a-visit'
 import { Route as RequestInformationRouteImport } from './routes/request-information'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WhyMadagascarRouteImport } from './routes/why-madagascar'
 import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
@@ -43,6 +46,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -58,6 +66,11 @@ const InsightsRoute = InsightsRouteImport.update({
   path: '/insights',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RequestAVisitRoute = RequestAVisitRouteImport.update({
   id: '/request-a-visit',
   path: '/request-a-visit',
@@ -71,6 +84,11 @@ const RequestInformationRoute = RequestInformationRouteImport.update({
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhyMadagascarRoute = WhyMadagascarRouteImport.update({
@@ -94,12 +112,15 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/faq': typeof FaqRoute
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/request-a-visit': typeof RequestAVisitRoute
   '/request-information': typeof RequestInformationRoute
   '/solutions': typeof SolutionsRoute
+  '/terms': typeof TermsRoute
   '/why-madagascar': typeof WhyMadagascarRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -109,12 +130,15 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/faq': typeof FaqRoute
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/request-a-visit': typeof RequestAVisitRoute
   '/request-information': typeof RequestInformationRoute
   '/solutions': typeof SolutionsRoute
+  '/terms': typeof TermsRoute
   '/why-madagascar': typeof WhyMadagascarRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -125,12 +149,15 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/faq': typeof FaqRoute
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/request-a-visit': typeof RequestAVisitRoute
   '/request-information': typeof RequestInformationRoute
   '/solutions': typeof SolutionsRoute
+  '/terms': typeof TermsRoute
   '/why-madagascar': typeof WhyMadagascarRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -142,12 +169,15 @@ export interface FileRouteTypes {
     | '/about'
     | '/careers'
     | '/contact'
+    | '/cookie-policy'
     | '/faq'
     | '/industries'
     | '/insights'
+    | '/privacy-policy'
     | '/request-a-visit'
     | '/request-information'
     | '/solutions'
+    | '/terms'
     | '/why-madagascar'
     | '/insights/$slug'
     | '/services/$slug'
@@ -157,12 +187,15 @@ export interface FileRouteTypes {
     | '/about'
     | '/careers'
     | '/contact'
+    | '/cookie-policy'
     | '/faq'
     | '/industries'
     | '/insights'
+    | '/privacy-policy'
     | '/request-a-visit'
     | '/request-information'
     | '/solutions'
+    | '/terms'
     | '/why-madagascar'
     | '/insights/$slug'
     | '/services/$slug'
@@ -172,12 +205,15 @@ export interface FileRouteTypes {
     | '/about'
     | '/careers'
     | '/contact'
+    | '/cookie-policy'
     | '/faq'
     | '/industries'
     | '/insights'
+    | '/privacy-policy'
     | '/request-a-visit'
     | '/request-information'
     | '/solutions'
+    | '/terms'
     | '/why-madagascar'
     | '/insights/$slug'
     | '/services/$slug'
@@ -188,12 +224,15 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
   FaqRoute: typeof FaqRoute
   IndustriesRoute: typeof IndustriesRoute
   InsightsRoute: typeof InsightsRouteWithChildren
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RequestAVisitRoute: typeof RequestAVisitRoute
   RequestInformationRoute: typeof RequestInformationRoute
   SolutionsRoute: typeof SolutionsRoute
+  TermsRoute: typeof TermsRoute
   WhyMadagascarRoute: typeof WhyMadagascarRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
 }
@@ -228,6 +267,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -249,6 +295,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/request-a-visit': {
       id: '/request-a-visit'
       path: '/request-a-visit'
@@ -268,6 +321,13 @@ declare module '@tanstack/react-router' {
       path: '/solutions'
       fullPath: '/solutions'
       preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/why-madagascar': {
@@ -311,12 +371,15 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
   FaqRoute: FaqRoute,
   IndustriesRoute: IndustriesRoute,
   InsightsRoute: InsightsRouteWithChildren,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   RequestAVisitRoute: RequestAVisitRoute,
   RequestInformationRoute: RequestInformationRoute,
   SolutionsRoute: SolutionsRoute,
+  TermsRoute: TermsRoute,
   WhyMadagascarRoute: WhyMadagascarRoute,
   ServicesSlugRoute: ServicesSlugRoute,
 }
