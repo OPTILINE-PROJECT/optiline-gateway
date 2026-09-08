@@ -19,7 +19,7 @@ export function Header() {
   ] as const;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/90 shadow-[0_8px_30px_-24px_var(--navy)] backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Logo />
         <nav className="hidden items-center gap-7 text-[13.5px] text-muted-foreground lg:flex">
@@ -39,7 +39,7 @@ export function Header() {
           <LanguageSwitcher />
           <Link
             to="/request-information"
-            className="hidden rounded-md bg-navy px-4 py-2.5 text-[13.5px] font-semibold text-navy-foreground ring-1 ring-black/5 transition-colors hover:bg-blue sm:inline-flex"
+            className="hidden rounded-md bg-navy px-4 py-2.5 text-[13.5px] font-semibold text-navy-foreground transition-colors hover:bg-blue sm:inline-flex"
           >
             {t("cta.buildTeam")}
           </Link>

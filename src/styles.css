@@ -44,6 +44,9 @@
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
   --color-blue: var(--blue);
+  --color-coral: var(--coral);
+  --color-sun: var(--sun);
+  --color-mint: var(--mint);
   --color-line: var(--line);
   --color-paper: var(--paper);
 
@@ -63,6 +66,9 @@
   --navy: oklch(0.26 0.055 265);
   --navy-foreground: oklch(0.985 0.004 265);
   --blue: oklch(0.55 0.17 255);
+  --coral: oklch(0.68 0.18 34);
+  --sun: oklch(0.82 0.15 84);
+  --mint: oklch(0.9 0.08 165);
 
   --primary: oklch(0.55 0.17 255);
   --primary-foreground: oklch(0.985 0.004 265);
@@ -135,6 +141,24 @@
 
 @utility shadow-elevate {
   box-shadow: 0 16px 40px -18px color-mix(in oklab, var(--navy) 45%, transparent);
+}
+
+@utility section-wash-blue {
+  background: color-mix(in oklab, var(--blue) 7%, var(--background));
+  box-shadow: 0 0 0 100vmax color-mix(in oklab, var(--blue) 7%, var(--background));
+  clip-path: inset(0 -100vmax);
+}
+
+@utility section-wash-mint {
+  background: color-mix(in oklab, var(--mint) 48%, var(--background));
+  box-shadow: 0 0 0 100vmax color-mix(in oklab, var(--mint) 48%, var(--background));
+  clip-path: inset(0 -100vmax);
+}
+
+@utility section-wash-warm {
+  background: color-mix(in oklab, var(--sun) 10%, var(--background));
+  box-shadow: 0 0 0 100vmax color-mix(in oklab, var(--sun) 10%, var(--background));
+  clip-path: inset(0 -100vmax);
 }
 
 @media (prefers-reduced-motion: reduce) {
