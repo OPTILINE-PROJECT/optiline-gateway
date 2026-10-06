@@ -41,7 +41,7 @@ export type Solution = {
   items: string[];
   cta: string;
 };
-
+ 
 export const solutions: Solution[] = [
   {
     slug: "call-center",

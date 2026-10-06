@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
 
 export function LogoMark({ inverted = false }: { inverted?: boolean }) {
   return (
@@ -28,13 +29,14 @@ export function LogoMark({ inverted = false }: { inverted?: boolean }) {
 
 export function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
-    <Link to="/" className="group flex items-center gap-3" aria-label="Optiline Mada — home">
-      <span className="size-9 shrink-0 transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">
-        <LogoMark inverted={inverted} />
-      </span>
-      <span className={`text-[15px] font-extrabold ${inverted ? "text-navy-foreground" : "text-foreground"}`}>
-        OPTILINE<span className={inverted ? "font-medium text-navy-foreground/60" : "font-medium text-muted-foreground"}> MADA</span>
-      </span>
+    <Link to="/" className="group flex items-center" aria-label="Optiline Mada — home">
+      <img
+        src={logo}
+        alt="Optiline Mada"
+        className={`h-16 w-auto transition-transform duration-300 group-hover:scale-105 ${
+          inverted ? "brightness-0 invert" : ""
+        }`}
+      />
     </Link>
   );
 }

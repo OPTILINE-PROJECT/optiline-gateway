@@ -1,7 +1,13 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
+import { PhotoGallery, PhotoBanner, type PhotoKey } from "@/components/PhotoGallery";
 import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blocks";
-import { howItWorks, solutions } from "@/lib/content";
+import { howItWorks, solutions, type Solution } from "@/lib/content";
+
+const serviceBanners: Record<Solution["slug"], { k: PhotoKey; caption: string }> = {
+  "call-center": { k: "supportAgent", caption: "Dedicated customer operations teams" },
+  "it-development": { k: "developers", caption: "Engineering teams working as an extension of yours" },
+  "administrative-outsourcing": { k: "backOffice", caption: "Structured, confidential back-office operations" },
+};
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
@@ -45,6 +51,7 @@ export const Route = createFileRoute("/services/$slug")({
 
 function ServicePage() {
   const { solution } = Route.useLoaderData();
+  const banner = serviceBanners[solution.slug];
 
   return (
     <>
@@ -86,7 +93,7 @@ function ServicePage() {
               ))}
           </div>
         </section>
-        <PhotoBanner k="serverRoom" caption="Secure, high-speed infrastructure" />
+        <PhotoBanner k={banner.k} caption={banner.caption} />
       </div>
 
       <CTASection title={solution.cta} subtitle="Tell us the profiles and volumes — we prepare a custom proposal." />
