@@ -654,7 +654,7 @@ function Index() {
 function ManagedStepsLine() {
   const [active, setActive] = useState(0);
   const last = managedSteps.length - 1;
-  const current = managedSteps[active];
+  const current = managedSteps[active]!;
 
   return (
     <div>
@@ -716,7 +716,7 @@ function ManagedStepsLine() {
       >
         <div className="max-w-2xl">
           <span className="font-mono text-[12px] font-medium text-blue">
-            {current.n} / {managedSteps[last].n}
+            {current.n} / {managedSteps[last]!.n}
           </span>
           <h3 className="mt-1 text-[18px] font-bold tracking-tight text-foreground">
             {current.title}
@@ -754,9 +754,9 @@ function parseValue(value: string) {
   const m = value.match(/^(.*?)(\d[\d,]*)(.*)$/);
   if (!m) return { prefix: "", number: null as number | null, suffix: value };
   return {
-    prefix: m[1].trim(),
-    number: Number(m[2].replace(/,/g, "")),
-    suffix: m[3],
+    prefix: (m[1] ?? "").trim(),
+    number: Number((m[2] ?? "").replace(/,/g, "")),
+    suffix: m[3] ?? "",
   };
 }
 
@@ -769,7 +769,7 @@ function useInView<T extends Element>() {
     if (!el) return;
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setInView(true);
           io.disconnect();
         }
