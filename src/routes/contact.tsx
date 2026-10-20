@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
-import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
+import { PhotoBanner } from "@/components/PhotoGallery";
+import { OfficeLocations } from "@/components/OfficeLocations";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeading } from "@/components/blocks";
 import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
@@ -18,6 +19,8 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact Optiline Mada" },
       { property: "og:description", content: "Talk to our team about your outsourcing project." },
       { property: "og:url", content: "/contact" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -162,6 +165,7 @@ function ContactPage() {
             )}
           </div>
         </section>
+        <OfficeLocations />
         <PhotoBanner k="reception" caption="Visit our offices in Antsirabe" />
       </div>
     </>

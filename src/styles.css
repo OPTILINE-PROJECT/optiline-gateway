@@ -170,3 +170,12 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Positions preserve the projection of the source Careline world map. */
+.office-pin-antsirabe { left: 63.0622%; top: 72.3155%; }
+.office-pin-silicon { left: 16.0761%; top: 32.8145%; }
+.office-pin-miami { left: 27.7253%; top: 40.8159%; }
+.office-pin-dubai { left: 65.3558%; top: 41.2317%; }
+.office-pin-singapore { left: 78.8483%; top: 57.7379%; }
+.office-pin-london { left: 49.97%; top: 23.0897%; }
+.office-pin-hongkong { left: 81.7097%; top: 43.2517%; }
