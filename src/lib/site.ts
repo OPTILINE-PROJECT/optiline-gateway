@@ -57,3 +57,14 @@ export const infrastructureStats: { label: string; value: string }[] = [
   { label: "Operations Coverage", value: "24/7" },
   { label: "Agents Capacity (2 shifts)", value: "6,000+" },
 ];
+
+/** Office addresses confirmed by Optiline; keep postal addresses untranslated. */
+export const offices = [
+  { id: "antsirabe", city: "Antsirabe", country: "Madagascar", address: "Lot 0912 C 185 Manodidina ny Gara, Antsirabe I, Madagascar" },
+  { id: "silicon-valley", city: "Silicon Valley", country: "United States", address: "3790 El Camino Real, Palo Alto, CA 94306, USA" },
+  { id: "miami", city: "Miami", country: "United States", address: "4300 Biscayne Blvd, Suite 203, Miami, FL 33137, USA" },
+  { id: "dubai", city: "Dubai", country: "United Arab Emirates", address: "Gate Avenue, Dubai, UAE" },
+  { id: "singapore", city: "Singapore", country: "Singapore", address: "Marina Bay Financial Centre Tower 2, 10 Marina Boulevard, Singapore 018983" },
+  { id: "london", city: "London", country: "United Kingdom", address: "63–66 Hatton Garden, London EC1N 8LE, United Kingdom" },
+  { id: "hong-kong", city: "Hong Kong", country: "Hong Kong SAR", address: "7/F, Euro Trade Centre, 13–14 Connaught Road Central, Central, Hong Kong" },
+] as const;
