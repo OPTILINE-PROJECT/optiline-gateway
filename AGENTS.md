@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep confirmed office addresses in the central site configuration and the imported Careline map projection separate from the Contact view, so location selection and postal data stay consistent.
