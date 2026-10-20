@@ -16,15 +16,23 @@ const copy = {
   ar: { title: "مكاتبنا الدولية", map: "مواقع المكاتب", open: "عرض الموقع", country: "البلد" },
 };
 const pins = ["office-pin-antsirabe", "office-pin-silicon", "office-pin-miami", "office-pin-dubai", "office-pin-singapore", "office-pin-london", "office-pin-hongkong"];
-const countries = ["MG", "US", "US", "AE", "SG", "GB", "HK"];
+const countries = {
+  en: ["Madagascar", "United States", "United States", "United Arab Emirates", "Singapore", "United Kingdom", "Hong Kong SAR"],
+  fr: ["Madagascar", "États-Unis", "États-Unis", "Émirats arabes unis", "Singapour", "Royaume-Uni", "Hong Kong"],
+  es: ["Madagascar", "Estados Unidos", "Estados Unidos", "Emiratos Árabes Unidos", "Singapur", "Reino Unido", "Hong Kong"],
+  de: ["Madagaskar", "Vereinigte Staaten", "Vereinigte Staaten", "Vereinigte Arabische Emirate", "Singapur", "Vereinigtes Königreich", "Hongkong"],
+  it: ["Madagascar", "Stati Uniti", "Stati Uniti", "Emirati Arabi Uniti", "Singapore", "Regno Unito", "Hong Kong"],
+  pt: ["Madagáscar", "Estados Unidos", "Estados Unidos", "Emirados Árabes Unidos", "Singapura", "Reino Unido", "Hong Kong"],
+  nl: ["Madagaskar", "Verenigde Staten", "Verenigde Staten", "Verenigde Arabische Emiraten", "Singapore", "Verenigd Koninkrijk", "Hongkong"],
+  ar: ["مدغشقر", "الولايات المتحدة", "الولايات المتحدة", "الإمارات العربية المتحدة", "سنغافورة", "المملكة المتحدة", "هونغ كونغ"],
+};
 
 export function OfficeLocations() {
   const { lang } = useLanguage();
   const [selected, setSelected] = useState<string>(offices[0].id);
   const active = offices.find((office) => office.id === selected) ?? offices[0];
   const c = copy[lang];
-  const names = new Intl.DisplayNames([lang], { type: "region" });
-  const country = (index: number) => names.of(countries[index] ?? "MG");
+  const country = (index: number) => countries[lang][index];
   const locationUrl = (address: string) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
   return (
