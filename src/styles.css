@@ -179,3 +179,46 @@
 .office-pin-singapore { left: 78.8483%; top: 57.7379%; }
 .office-pin-london { left: 49.97%; top: 23.0897%; }
 .office-pin-hongkong { left: 81.7097%; top: 43.2517%; }
+
+/* Geographic reach is illustrative, not a contractual service boundary. */
+.office-marker { width: 0; height: 0; }
+.office-reach {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  transform: translate(-50%, -50%);
+  border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 8%, transparent);
+  pointer-events: none;
+}
+.office-reach::after {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  border-radius: 50%;
+}
+.office-reach-active {
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 16%, transparent);
+}
+.office-city-label {
+  position: absolute;
+  z-index: 20;
+  top: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  color: var(--foreground);
+  background: color-mix(in oklab, var(--background) 94%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  pointer-events: none;
+}
+.office-city-label-above { top: auto; bottom: 16px; }
