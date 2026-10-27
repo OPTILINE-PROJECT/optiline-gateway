@@ -68,7 +68,7 @@ const designs: Record<string, React.ReactNode> = {
   ),
 };
 
-export function Flag({ code, ...props }: { code?: string } & SVGProps<SVGSVGElement>) {
+export function Flag({ code, ...props }: { code: string | undefined } & SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 60 42"
