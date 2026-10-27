@@ -68,7 +68,7 @@ const designs: Record<string, React.ReactNode> = {
   ),
 };
 
-export function Flag({ code, ...props }: { code: string } & SVGProps<SVGSVGElement>) {
+export function Flag({ code, ...props }: { code?: string } & SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 60 42"
@@ -76,7 +76,7 @@ export function Flag({ code, ...props }: { code: string } & SVGProps<SVGSVGEleme
       className="size-4 shrink-0 rounded-[3px] ring-1 ring-line"
       {...props}
     >
-      {designs[code] ?? null}
+      {designs[code ?? ""] ?? null}
     </svg>
   );
 }
