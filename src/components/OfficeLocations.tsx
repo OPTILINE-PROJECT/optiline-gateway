@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowUpRight, Globe2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Flag } from "@/components/Flag";
 import { useLanguage } from "@/i18n/language";
 import { offices } from "@/lib/site";
 import map from "@/lib/office-map.json";
@@ -16,7 +17,7 @@ const copy = {
   ar: { title: "مكاتبنا الدولية", map: "مواقع المكاتب", open: "عرض الموقع", country: "البلد" },
 };
 const pins = ["office-pin-antsirabe", "office-pin-silicon", "office-pin-miami", "office-pin-dubai", "office-pin-singapore", "office-pin-london", "office-pin-hongkong"];
-const flags = ["🇲🇬", "🇺🇸", "🇺🇸", "🇦🇪", "🇸🇬", "🇬🇧", "🇭🇰"];
+const flagCodes = ["MG", "US", "US", "AE", "SG", "GB", "HK"];
 const countries = {
   en: ["Madagascar", "United States", "United States", "United Arab Emirates", "Singapore", "United Kingdom", "Hong Kong SAR"],
   fr: ["Madagascar", "États-Unis", "États-Unis", "Émirats arabes unis", "Singapour", "Royaume-Uni", "Hong Kong"],
@@ -58,7 +59,7 @@ export function OfficeLocations() {
               <span className="size-2.5 rounded-full bg-accent ring-4 ring-background" />
             </Button>
             <span className={`office-city-label ${index === 1 || index === 3 || index === 5 || index === 6 ? "office-city-label-above" : ""}`}>
-              <span aria-hidden="true">{flags[index]}</span> {office.city}
+              <Flag code={flagCodes[index]} className="size-3.5" /> {office.city}
             </span>
             </div>
           ))}
@@ -66,7 +67,7 @@ export function OfficeLocations() {
         </div>
         <div aria-live="polite" className="min-h-44 border-s-2 border-accent ps-5">
           <p className="text-xs font-medium uppercase text-muted-foreground">{country(offices.indexOf(active))}</p>
-          <h3 className="mt-2 flex items-center gap-2 text-xl font-bold text-foreground"><span aria-hidden="true">{flags[offices.indexOf(active)]}</span>{active.city}</h3>
+          <h3 className="mt-2 flex items-center gap-2 text-xl font-bold text-foreground"><Flag code={flagCodes[offices.indexOf(active)]} />{active.city}</h3>
           <address className="mt-3 text-sm not-italic leading-relaxed text-muted-foreground">{active.address}</address>
           <Button asChild variant="ghost" size="icon" className="mt-3 text-blue">
             <a href={locationUrl(active.address)} aria-label={`${c.map} — ${active.city}`} title={`${c.map} — ${active.city}`} target="_blank" rel="noopener noreferrer"><ArrowUpRight /></a>
@@ -77,7 +78,7 @@ export function OfficeLocations() {
         {offices.map((office, index) => (
           <article key={office.id} className={`flex flex-col rounded-lg border bg-card p-5 ${selected === office.id ? "border-blue" : "border-line"}`}>
             <div className="flex items-center justify-between gap-3">
-              <h3 className="flex items-center gap-2 text-base font-semibold text-foreground"><span aria-hidden="true">{flags[index]}</span>{office.city}</h3>
+              <h3 className="flex items-center gap-2 text-base font-semibold text-foreground"><Flag code={flagCodes[index]} />{office.city}</h3>
               <Button size="icon" variant="ghost" title={`${c.map} — ${office.city}`} aria-label={`${c.map} — ${office.city}`} aria-pressed={selected === office.id} onClick={() => setSelected(office.id)} className="shrink-0 text-blue"><MapPin /></Button>
             </div>
             <p className="text-xs text-muted-foreground">{country(index)}</p>
