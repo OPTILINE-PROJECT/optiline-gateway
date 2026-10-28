@@ -38,9 +38,17 @@ function SolutionsPage() {
         <section className="space-y-6 py-16 md:py-20">
           {solutions.map((s) => (
             <article key={s.slug} className="rounded-2xl border border-line bg-card p-8 md:p-10">
-              <h2 className="text-[clamp(1.5rem,2.6vw,2rem)] font-extrabold tracking-tight text-foreground">
-                {s.title}
-              </h2>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h2 className="text-[clamp(1.5rem,2.6vw,2rem)] font-extrabold tracking-tight text-foreground">
+                  {s.title}
+                </h2>
+                <p className="rounded-md border border-accent/40 bg-accent/10 px-3 py-1.5 font-mono text-[14px] font-bold text-foreground">
+                  {s.priceFrom}
+                </p>
+              </div>
+              <p className="mt-2 text-[13px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                {s.priceProfile}
+              </p>
               <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed text-muted-foreground">
                 {s.intro}
               </p>
