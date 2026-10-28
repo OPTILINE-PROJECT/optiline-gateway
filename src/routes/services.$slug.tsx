@@ -58,6 +58,17 @@ function ServicePage() {
       <PageHero eyebrow="Service" title={solution.title} intro={solution.intro} />
 
       <div className="mx-auto max-w-6xl px-6">
+        <section className="pb-2 pt-10 md:pt-12">
+          <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-line bg-navy/5 px-6 py-5">
+            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+              {solution.priceProfile}
+            </p>
+            <p className="font-mono text-[18px] font-bold tracking-tight text-foreground">
+              {solution.priceFrom}
+            </p>
+          </div>
+        </section>
+
         <section className="py-16 md:py-20">
           <SectionHeading eyebrow="Scope" title="Roles and activities we cover" className="mb-10" />
           <ListGrid items={solution.items} />
