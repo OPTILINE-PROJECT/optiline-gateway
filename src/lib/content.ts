@@ -37,6 +37,10 @@ export type Solution = {
   slug: "call-center" | "it-development" | "administrative-outsourcing";
   title: string;
   short: string;
+  /** Role used as the pricing reference, e.g. "Dedicated teleconsultant". */
+  priceProfile: string;
+  /** Starting price for one dedicated position, as provided by the client. */
+  priceFrom: string;
   intro: string;
   items: string[];
   cta: string;
@@ -47,6 +51,8 @@ export const solutions: Solution[] = [
     slug: "call-center",
     title: "Call Center & Customer Operations",
     short: "Customer service, sales and support teams operating to international standards.",
+    priceProfile: "Dedicated teleconsultant",
+    priceFrom: "From €690 / month",
     intro:
       "Dedicated customer operations teams in Madagascar — recruited, trained, equipped and supervised by Optiline Mada, working with your processes and your tools.",
     items: [
@@ -69,6 +75,8 @@ export const solutions: Solution[] = [
     slug: "it-development",
     title: "IT & Software Development",
     short: "Dedicated engineering teams working alongside your in-house organisation.",
+    priceProfile: "Dedicated developer",
+    priceFrom: "From €1,290 / month",
     intro:
       "Software and IT professionals working as an extension of your own team, with the workspace, connectivity and local management handled for you.",
     items: [
@@ -91,6 +99,8 @@ export const solutions: Solution[] = [
     slug: "administrative-outsourcing",
     title: "Administrative & Back-Office Services",
     short: "Structured back-office support for finance, administration and operations.",
+    priceProfile: "Dedicated assistant",
+    priceFrom: "From €590 / month",
     intro:
       "Reliable administrative and back-office teams handling recurring processes with accuracy, confidentiality and consistent supervision.",
     items: [
