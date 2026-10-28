@@ -359,8 +359,16 @@ function Index() {
                   ))}
                 </ul>
 
-                {/* mt-auto pousse le bouton en bas : tous les boutons sont alignés */}
+                {/* mt-auto pousse le bloc tarif + bouton en bas : tous les boutons sont alignés */}
                 <div className="mt-auto pt-6">
+                  <div className="mb-4 rounded-lg border border-line bg-foreground/[0.03] px-4 py-3">
+                    <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                      {s.priceProfile}
+                    </p>
+                    <p className="mt-1 font-mono text-[17px] font-bold tracking-tight text-foreground">
+                      {s.priceFrom}
+                    </p>
+                  </div>
                   <Link
                     to="/services/$slug"
                     params={{ slug: s.slug }}
