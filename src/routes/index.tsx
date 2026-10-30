@@ -36,6 +36,9 @@ const toolsRow: Logo[] = [
   { name: "Orange", slug: "orange" },
   { name: "Yas", src: "/partners/yas.svg" }, // à confirmer
   { name: "Airtel", slug: "airtel" }, // à confirmer
+  { name: "CloudTalk", src: "/partners/cloudtalk.svg" },
+  { name: "Ringover", src: "/partners/ringover.svg" },
+  { name: "Aircall", src: "/partners/aircall.svg" },
   { name: "HEROES CRM", src: "/partners/heroes-crm.svg" },
   { name: "Zapier", slug: "zapier" },
   { name: "Salesforce", slug: "salesforce" },
@@ -92,7 +95,7 @@ function LogoCard({ logo }: { logo: Logo }) {
           className={
             logo.flag
               ? "h-5 w-auto rounded-[3px] shadow-sm"
-              : `w-auto max-w-[120px] object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0 ${
+              : `w-auto max-w-[140px] object-contain transition duration-300 group-hover:scale-105 ${
                   showName ? "h-6" : "max-h-8"
                 }`
           }
