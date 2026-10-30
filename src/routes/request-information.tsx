@@ -79,8 +79,8 @@ function RequestInformationPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-8 md:py-10">
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start">
-        <form onSubmit={onSubmit} className="space-y-5">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
+        <form onSubmit={onSubmit} className="space-y-4">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue">Request information</p>
             <h1 className="mt-1 text-[clamp(1.5rem,2.6vw,2rem)] font-extrabold tracking-tight text-foreground">
@@ -95,7 +95,7 @@ function RequestInformationPage() {
             <legend className="mb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-blue">
               Contact information
             </legend>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <Field label="First Name" htmlFor="firstName" required>
                 <input id="firstName" name="firstName" required className={inputClass} />
               </Field>
@@ -124,7 +124,7 @@ function RequestInformationPage() {
             <legend className="mb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-blue">
               Your project
             </legend>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <Field label="Service Required" htmlFor="service" required>
                 <select id="service" name="service" required className={inputClass} defaultValue="">
                   <option value="" disabled>
@@ -163,13 +163,12 @@ function RequestInformationPage() {
                   ))}
                 </select>
               </Field>
-            </div>
-            <div className="mt-3">
+              <div className="sm:col-span-2 xl:col-span-3">
               <Field label="Project Description" htmlFor="message">
                 <textarea
                   id="message"
                   name="message"
-                  rows={2}
+                  rows={1}
                   className={inputClass}
                   placeholder="Tell us more about your requirements"
                 />
@@ -190,7 +189,7 @@ function RequestInformationPage() {
           <img
             src={officeTeam}
             alt="Optiline Mada team at work in the office"
-            className="h-[560px] w-full object-cover object-top"
+            className="h-[520px] w-full object-cover object-top"
           />
         </figure>
       </div>
