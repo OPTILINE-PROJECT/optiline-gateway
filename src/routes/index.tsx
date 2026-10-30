@@ -36,6 +36,9 @@ const toolsRow: Logo[] = [
   { name: "Orange", slug: "orange" },
   { name: "Yas", src: "/partners/yas.svg" }, // à confirmer
   { name: "Airtel", slug: "airtel" }, // à confirmer
+  { name: "CloudTalk", src: "/partners/cloudtalk.svg" },
+  { name: "Ringover", src: "/partners/ringover.svg" },
+  { name: "Aircall", src: "/partners/aircall.svg" },
   { name: "HEROES CRM", src: "/partners/heroes-crm.svg" },
   { name: "Zapier", slug: "zapier" },
   { name: "Salesforce", slug: "salesforce" },
