@@ -28,7 +28,7 @@ export function LanguageSwitcher() {
         aria-label="Select language"
         className="flex items-center gap-1.5 rounded-md border border-line px-2.5 py-1.5 text-[13px] text-muted-foreground transition-colors hover:border-foreground/30"
       >
-        <Flag code={flagByLang[current.code]} className="size-4 shrink-0 rounded-[3px] ring-1 ring-line" />
+        <Flag code={flagByLang[current.code]} className="size-4 shrink-0 rounded-[3px]" />
         <span className="font-medium text-foreground">{current.label}</span>
         <span className="inline-block h-1.5 w-1.5 rotate-45 border-b border-r border-muted-foreground" />
       </button>
@@ -53,7 +53,7 @@ export function LanguageSwitcher() {
                     l.code === lang ? "text-foreground font-semibold" : "text-muted-foreground"
                   }`}
                 >
-                  <Flag code={flagByLang[l.code]} className="size-4 shrink-0 rounded-[3px] ring-1 ring-line" />
+                  <Flag code={flagByLang[l.code]} className="size-4 shrink-0 rounded-[3px]" />
                   <span>{l.label}</span>
                 </button>
               </li>
