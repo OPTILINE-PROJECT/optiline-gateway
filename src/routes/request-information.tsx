@@ -117,7 +117,6 @@ function RequestInformationPage() {
               <Field label="Country" htmlFor="country" required>
                 <input id="country" name="country" required className={inputClass} />
               </Field>
-              </div>
             </div>
           </fieldset>
 
