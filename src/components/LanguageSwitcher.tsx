@@ -1,5 +1,17 @@
 import { useState } from "react";
+import { Flag } from "@/components/Flag";
 import { languages, useLanguage } from "@/i18n/language";
+
+const flagByLang: Record<string, string> = {
+  en: "GB",
+  fr: "FR",
+  es: "ES",
+  de: "DE",
+  it: "IT",
+  pt: "PT",
+  nl: "NL",
+  ar: "SA",
+};
 
 export function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
@@ -16,7 +28,8 @@ export function LanguageSwitcher() {
         aria-label="Select language"
         className="flex items-center gap-1.5 rounded-md border border-line px-2.5 py-1.5 text-[13px] text-muted-foreground transition-colors hover:border-foreground/30"
       >
-        <span className="font-medium text-foreground">{current.short}</span>
+        <Flag code={flagByLang[current.code]} className="size-4 shrink-0 rounded-[3px] ring-1 ring-line" />
+        <span className="font-medium text-foreground">{current.label}</span>
         <span className="inline-block h-1.5 w-1.5 rotate-45 border-b border-r border-muted-foreground" />
       </button>
       {open && (
@@ -36,12 +49,12 @@ export function LanguageSwitcher() {
                     setLang(l.code);
                     setOpen(false);
                   }}
-                  className={`flex w-full items-center justify-between px-3 py-2 text-[13.5px] transition-colors hover:bg-paper ${
+                  className={`flex w-full items-center gap-2.5 px-3 py-2 text-[13.5px] transition-colors hover:bg-paper ${
                     l.code === lang ? "text-foreground font-semibold" : "text-muted-foreground"
                   }`}
                 >
+                  <Flag code={flagByLang[l.code]} className="size-4 shrink-0 rounded-[3px] ring-1 ring-line" />
                   <span>{l.label}</span>
-                  <span className="text-[11px] tracking-wider">{l.short}</span>
                 </button>
               </li>
             ))}
