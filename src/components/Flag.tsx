@@ -56,6 +56,59 @@ const designs: Record<string, React.ReactNode> = {
       ))}
     </>
   ),
+  FR: (
+    <>
+      <rect width="20" height="42" fill="#0055A4" />
+      <rect x="20" width="20" height="42" fill="#FFFFFF" />
+      <rect x="40" width="20" height="42" fill="#EF4135" />
+    </>
+  ),
+  ES: (
+    <>
+      <rect width="60" height="42" fill="#AA151B" />
+      <rect y="10.5" width="60" height="21" fill="#F1BF00" />
+    </>
+  ),
+  DE: (
+    <>
+      <rect width="60" height="14" fill="#000000" />
+      <rect y="14" width="60" height="14" fill="#DD0000" />
+      <rect y="28" width="60" height="14" fill="#FFCE00" />
+    </>
+  ),
+  IT: (
+    <>
+      <rect width="20" height="42" fill="#009246" />
+      <rect x="20" width="20" height="42" fill="#FFFFFF" />
+      <rect x="40" width="20" height="42" fill="#CE2B37" />
+    </>
+  ),
+  PT: (
+    <>
+      <rect width="24" height="42" fill="#046A38" />
+      <rect x="24" width="36" height="42" fill="#DA291C" />
+      <circle cx="24" cy="21" r="7" fill="#FFE900" />
+      <circle cx="24" cy="21" r="4" fill="#FFFFFF" />
+      <circle cx="24" cy="21" r="2" fill="#DA291C" />
+    </>
+  ),
+  NL: (
+    <>
+      <rect width="60" height="14" fill="#AE1C28" />
+      <rect y="14" width="60" height="14" fill="#FFFFFF" />
+      <rect y="28" width="60" height="14" fill="#21468B" />
+    </>
+  ),
+  SA: (
+    <>
+      <rect width="60" height="42" fill="#006C35" />
+      <rect x="8" y="12" width="40" height="2.6" rx="1.3" fill="#FFFFFF" />
+      <rect x="10" y="17" width="34" height="2.6" rx="1.3" fill="#FFFFFF" />
+      <rect x="8" y="22" width="40" height="2.6" rx="1.3" fill="#FFFFFF" />
+      <rect x="10" y="27" width="34" height="2.6" rx="1.3" fill="#FFFFFF" />
+      <rect x="6" y="31" width="46" height="2.2" rx="1.1" fill="#FFFFFF" />
+    </>
+  ),
   HK: (
     <>
       <rect width="60" height="42" fill="#DE2910" />
