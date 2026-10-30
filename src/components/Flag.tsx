@@ -126,7 +126,7 @@ export function Flag({ code, ...props }: { code: string | undefined } & SVGProps
     <svg
       viewBox="0 0 60 42"
       aria-hidden="true"
-      className="size-4 shrink-0 rounded-[3px] ring-1 ring-line"
+      className="size-4 shrink-0 rounded-[3px]"
       {...props}
     >
       {designs[code ?? ""] ?? null}
