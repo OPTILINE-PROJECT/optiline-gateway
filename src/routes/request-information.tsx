@@ -169,7 +169,7 @@ function RequestInformationPage() {
                   id="message"
                   name="message"
                   rows={1}
-                  className={inputClass}
+                  className={`${inputClass} resize-none`}
                   placeholder="Tell us more about your requirements"
                 />
               </Field>
