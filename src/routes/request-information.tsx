@@ -95,7 +95,7 @@ function RequestInformationPage() {
             <legend className="mb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-blue">
               Contact information
             </legend>
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid items-end gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <Field label="First Name" htmlFor="firstName" required>
                 <input id="firstName" name="firstName" required className={inputClass} />
               </Field>
@@ -124,7 +124,7 @@ function RequestInformationPage() {
             <legend className="mb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-blue">
               Your project
             </legend>
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid items-end gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <Field label="Service Required" htmlFor="service" required>
                 <select id="service" name="service" required className={inputClass} defaultValue="">
                   <option value="" disabled>
