@@ -12,3 +12,5 @@
 - Keep confirmed office addresses in the central site configuration and the imported Careline map projection separate from the Contact view, so location selection and postal data stay consistent.
 - Keep browser-local cookie choices in the shared consent module and require purpose-specific valid consent before any optional tracker loads; this preserves opt-in and withdrawal across pages.
 - Reuse CookiePreferences in the first-visit dialog and cookie policy page so visitors edit the same consent choices everywhere.
+- All lead forms share the fixed-recipient notification path and show success only after a confirmed send; failure keeps the form available instead of hiding the request in browser storage.
+- Run lead server-handler unit tests with vitest.leads.config.ts to avoid the framework RPC transform while testing notification outcomes.
