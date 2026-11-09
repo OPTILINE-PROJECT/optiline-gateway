@@ -14,3 +14,4 @@
 - Reuse CookiePreferences in the first-visit dialog and cookie policy page so visitors edit the same consent choices everywhere.
 - All lead forms share the fixed-recipient notification path and show success only after a confirmed send; failure keeps the form available instead of hiding the request in browser storage.
 - Run lead server-handler unit tests with vitest.leads.config.ts to avoid the framework RPC transform while testing notification outcomes.
+- Keep country-language choices and static flag drawings separate from LanguageSwitcher; only expose supported translations and persist the selected pair as a browser-local presentation preference.
