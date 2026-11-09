@@ -1,5 +1,6 @@
 import type { LanguageCode } from "./translations";
 import { cookieCopy } from "./cookies";
+import heLegal from "./he-legal.json";
 
 /**
  * Content of the legal pages (privacy policy, terms, cookie policy), per language.
@@ -1731,7 +1732,13 @@ const ar: LegalLang = {
   },
 };
 
-export const legalContent: Record<LanguageCode, LegalLang> = { en, fr, es, de, it, pt, nl, ar };
+const he: LegalLang = {
+  ...heLegal,
+  privacy: { ...heLegal.privacy, sections: heLegal.privacy.sections.map(({ box, ...section }) => ({ ...section, ...(box === "reg" ? { box } : {}) })) },
+  terms: { ...heLegal.terms, sections: heLegal.terms.sections.map(({ box, ...section }) => ({ ...section, ...(box === "regEmail" ? { box } : {}) })) },
+};
+
+export const legalContent: Record<LanguageCode, LegalLang> = { en, fr, es, de, it, pt, nl, ar, he };
 
 // Keep policy instructions aligned with the editable consent controls in every language.
 for (const lang of Object.keys(legalContent) as LanguageCode[]) {
