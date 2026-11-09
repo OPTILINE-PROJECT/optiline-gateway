@@ -24,6 +24,8 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WhyMadagascarRouteImport } from './routes/why-madagascar'
+import { Route as ApiCspReportRouteImport } from './routes/api/csp-report'
+import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
 import { Route as IndustriesSlugRouteImport } from './routes/industries.$slug'
 import { Route as InsightsIndexRouteImport } from './routes/insights.index'
@@ -106,6 +108,16 @@ const WhyMadagascarRoute = WhyMadagascarRouteImport.update({
   path: '/why-madagascar',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCspReportRoute = ApiCspReportRouteImport.update({
+  id: '/api/csp-report',
+  path: '/api/csp-report',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiHealthRoute = ApiHealthRouteImport.update({
+  id: '/api/health',
+  path: '/api/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -154,6 +166,8 @@ export interface FileRoutesByFullPath {
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
   '/why-madagascar': typeof WhyMadagascarRoute
+  '/api/csp-report': typeof ApiCspReportRoute
+  '/api/health': typeof ApiHealthRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -175,6 +189,8 @@ export interface FileRoutesByTo {
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
   '/why-madagascar': typeof WhyMadagascarRoute
+  '/api/csp-report': typeof ApiCspReportRoute
+  '/api/health': typeof ApiHealthRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -199,6 +215,8 @@ export interface FileRoutesById {
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
   '/why-madagascar': typeof WhyMadagascarRoute
+  '/api/csp-report': typeof ApiCspReportRoute
+  '/api/health': typeof ApiHealthRoute
   '/industries/$slug': typeof IndustriesSlugRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -224,6 +242,8 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/terms'
     | '/why-madagascar'
+    | '/api/csp-report'
+    | '/api/health'
     | '/industries/$slug'
     | '/insights/$slug'
     | '/services/$slug'
@@ -245,6 +265,8 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/terms'
     | '/why-madagascar'
+    | '/api/csp-report'
+    | '/api/health'
     | '/industries/$slug'
     | '/insights/$slug'
     | '/services/$slug'
@@ -268,6 +290,8 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/terms'
     | '/why-madagascar'
+    | '/api/csp-report'
+    | '/api/health'
     | '/industries/$slug'
     | '/insights/$slug'
     | '/services/$slug'
@@ -292,6 +316,8 @@ export interface RootRouteChildren {
   SolutionsRoute: typeof SolutionsRoute
   TermsRoute: typeof TermsRoute
   WhyMadagascarRoute: typeof WhyMadagascarRoute
+  ApiCspReportRoute: typeof ApiCspReportRoute
+  ApiHealthRoute: typeof ApiHealthRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
 }
@@ -403,6 +429,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhyMadagascarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/csp-report': {
+      id: '/api/csp-report'
+      path: '/api/csp-report'
+      fullPath: '/api/csp-report'
+      preLoaderRoute: typeof ApiCspReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/health': {
+      id: '/api/health'
+      path: '/api/health'
+      fullPath: '/api/health'
+      preLoaderRoute: typeof ApiHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries/': {
       id: '/industries/'
       path: '/'
@@ -492,6 +532,8 @@ const rootRouteChildren: RootRouteChildren = {
   SolutionsRoute: SolutionsRoute,
   TermsRoute: TermsRoute,
   WhyMadagascarRoute: WhyMadagascarRoute,
+  ApiCspReportRoute: ApiCspReportRoute,
+  ApiHealthRoute: ApiHealthRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
 }

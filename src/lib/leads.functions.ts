@@ -6,6 +6,10 @@ const schema = z.record(z.string().max(60), z.string().max(5000)).refine((o) => 
 export const sendLeadEmail = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => schema.parse(d))
   .handler(async ({ data }) => {
+    // Honeypot: a filled "website" field means a bot — pretend success, send nothing.
+    if (data["website"]?.trim()) {
+      return { ok: true };
+    }
     const { sendTemplateEmail } = await import("./email-templates/send-email");
     const email = data["email"];
     const replyTo = email && z.string().email().safeParse(email).success ? email : undefined;
