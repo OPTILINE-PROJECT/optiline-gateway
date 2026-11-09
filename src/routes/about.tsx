@@ -19,6 +19,8 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Our mission, vision, approach and values as an outsourcing partner in Madagascar.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],

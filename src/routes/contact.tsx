@@ -72,7 +72,7 @@ function ContactPage() {
               <div>
                 <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Contact in France</dt>
                 <dd className="mt-1 text-foreground">
-                  <a href={`tel:${site.contact.phoneFrance.replace(/\s/g, "")}`} className="hover:text-blue">
+                  <a dir="ltr" className="inline-block hover:text-blue" href={`tel:${site.contact.phoneFrance.replace(/\s/g, "")}`}>
                     {site.contact.phoneFrance}
                   </a>
                 </dd>
@@ -80,7 +80,7 @@ function ContactPage() {
               <div>
                 <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Contact in Madagascar</dt>
                 <dd className="mt-1 text-foreground">
-                  <a href={`tel:${site.contact.phoneMadagascar.replace(/\s/g, "")}`} className="hover:text-blue">
+                  <a dir="ltr" className="inline-block hover:text-blue" href={`tel:${site.contact.phoneMadagascar.replace(/\s/g, "")}`}>
                     {site.contact.phoneMadagascar}
                   </a>
                 </dd>

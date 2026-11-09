@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { useLanguage } from "@/i18n/language";
+import { languageDirection } from "@/i18n/direction";
 import { defaultRegionByLanguage, languageRegions, regionCountryName } from "@/lib/language-regions";
 
 const copy = {
@@ -16,6 +17,7 @@ const copy = {
   pt: ["Idioma", "Pesquisar países ou idiomas…", "Sem resultados."],
   nl: ["Taal", "Zoek landen of talen…", "Geen resultaten."],
   ar: ["اللغة", "ابحث عن بلد أو لغة…", "لا توجد نتائج."],
+  he: ["שפה", "חיפוש מדינות או שפות…", "לא נמצאו תוצאות."],
 };
 
 export function LanguageSwitcher() {
@@ -40,7 +42,7 @@ export function LanguageSwitcher() {
           <CountryFlag code={current.countryCode} className="h-4 w-6 shrink-0 rounded-[3px]" />
           <span className="min-w-0 max-w-24 text-start sm:max-w-32">
             <span className="block truncate text-sm leading-tight">{country}</span>
-            <span dir={lang === "ar" ? "rtl" : "ltr"} className="block truncate text-xs leading-tight text-muted-foreground">{current.label}</span>
+            <span dir={languageDirection(lang)} className="block truncate text-xs leading-tight text-muted-foreground">{current.label}</span>
           </span>
         </Button>
       </PopoverTrigger>
@@ -62,7 +64,7 @@ export function LanguageSwitcher() {
                   <CountryFlag code={region.countryCode} className="h-4 w-6 shrink-0 rounded-[3px]" />
                   <span className="min-w-0 flex-1 whitespace-normal text-start">
                     <span className="block font-medium">{name}</span>
-                    <span dir={region.lang === "ar" ? "rtl" : "ltr"} className="block text-xs text-muted-foreground">{region.label}</span>
+                    <span dir={languageDirection(region.lang)} className="block text-xs text-muted-foreground">{region.label}</span>
                   </span>
                   {current.id === region.id && <Check className="shrink-0 text-emerald" />}
                 </CommandItem>

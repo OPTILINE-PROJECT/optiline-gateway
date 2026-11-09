@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { languages, translations, type LanguageCode } from "./translations";
+import { languageDirection } from "./direction";
 
 type LanguageContextValue = {
   lang: LanguageCode;
@@ -22,7 +23,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = languageDirection(lang);
   }, [lang]);
 
   const setLang = useCallback((code: LanguageCode) => {
@@ -36,7 +37,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t, dir: lang === "ar" ? "rtl" : "ltr" }}>
+    <LanguageContext.Provider value={{ lang, setLang, t, dir: languageDirection(lang) }}>
       {children}
     </LanguageContext.Provider>
   );

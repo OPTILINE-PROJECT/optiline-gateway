@@ -19,6 +19,8 @@ export const Route = createFileRoute("/solutions")({
         content:
           "Three outsourcing families: customer operations, IT development and back-office services, fully managed in Madagascar.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/solutions" },
     ],
     links: [{ rel: "canonical", href: "/solutions" }],

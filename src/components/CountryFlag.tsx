@@ -2,6 +2,7 @@ import type { SVGProps } from "react";
 
 // Static country flag drawings matching the Careline selector; no external requests.
 const flags: Record<string, React.ReactNode> = {
+  "IL": (<><rect width="30" height="20" fill="#fff" /><path d="M0 3h30M0 17h30" stroke="#0038B8" strokeWidth="2.5" /><path d="m15 5.5 3.9 6.75h-7.8Zm0 9-3.9-6.75h7.8Z" fill="none" stroke="#0038B8" strokeWidth=".8" /></>),
   "DZ": (<><rect width="30" height="20" fill="#fff" /><rect width="15" height="20" fill="#006233" /><circle cx="16" cy="10" r="5" fill="#D21034" /><circle cx="17.6" cy="9" r="4.2" fill="#fff" /><path d="M0-1 .224-.309 .951-.309 .363.118 .588.809 0 .382 -.588.809 -.363.118 -.951-.309 -.224-.309Z" fill="#D21034" transform="translate(18 10) scale(2.5)" /></>),
   "AD": (<><rect width="30" height="20" fill="#10069F" /><rect x="10" width="10" height="20" fill="#FEDD00" /><rect x="20" width="10" height="20" fill="#D50032" /><path d="M12 7h6v5l-3 2-3-2Z" fill="#C6A158" /><path d="M13 8h4v4h-4Z" fill="#D50032" /></>),
   "AO": (<><rect width="30" height="10" fill="#CE1126" /><rect y="10" width="30" height="10" fill="#000" /><path d="M13 5a5 5 0 1 1-3 9m1-7 9 7" fill="none" stroke="#FFCB00" strokeWidth="1.4" /><path d="M0-1 .224-.309 .951-.309 .363.118 .588.809 0 .382 -.588.809 -.363.118 -.951-.309 -.224-.309Z" fill="#FFCB00" transform="translate(15 9) scale(2)" /></>),

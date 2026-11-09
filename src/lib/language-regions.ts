@@ -439,6 +439,13 @@ export const languageRegions: LanguageRegion[] = [
     "label": "Italiano"
   },
   {
+    "id": "IL-he",
+    "countryCode": "IL",
+    "lang": "he",
+    "country": "Israel",
+    "label": "עברית"
+  },
+  {
     "id": "IT-23-fr",
     "countryCode": "IT",
     "lang": "fr",
@@ -993,7 +1000,7 @@ export const languageRegions: LanguageRegion[] = [
   }
 ];
 
-export const defaultRegionByLanguage: Record<LanguageCode, string> = { en: "GB-en", fr: "FR-fr", es: "ES-es", de: "DE-de", it: "IT-it", pt: "PT-pt", nl: "NL-nl", ar: "SA-ar" };
+export const defaultRegionByLanguage: Record<LanguageCode, string> = { en: "GB-en", fr: "FR-fr", es: "ES-es", de: "DE-de", it: "IT-it", pt: "PT-pt", nl: "NL-nl", ar: "SA-ar", he: "IL-he" };
 
 export function regionCountryName(region: LanguageRegion, lang: LanguageCode) {
   const base = new Intl.DisplayNames([lang], { type: "region" }).of(region.countryCode) ?? region.country;

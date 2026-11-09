@@ -7,8 +7,9 @@ import it from "./auto/it.json";
 import pt from "./auto/pt.json";
 import nl from "./auto/nl.json";
 import ar from "./auto/ar.json";
+import he from "./auto/he.json";
 
-const dicts: Record<string, Record<string, string>> = { fr, es, de, it, pt, nl, ar };
+const dicts: Record<string, Record<string, string>> = { fr, es, de, it, pt, nl, ar, he };
 const ATTRS = ["placeholder", "aria-label", "alt", "title"] as const;
 
 // Remember the original English so switching back (or re-renders) works.
