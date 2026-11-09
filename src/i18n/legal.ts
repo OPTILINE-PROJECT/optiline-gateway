@@ -1,4 +1,5 @@
 import type { LanguageCode } from "./translations";
+import { cookieCopy } from "./cookies";
 
 /**
  * Content of the legal pages (privacy policy, terms, cookie policy), per language.
@@ -1731,3 +1732,13 @@ const ar: LegalLang = {
 };
 
 export const legalContent: Record<LanguageCode, LegalLang> = { en, fr, es, de, it, pt, nl, ar };
+
+// Keep policy instructions aligned with the editable consent controls in every language.
+for (const lang of Object.keys(legalContent) as LanguageCode[]) {
+  const copy = cookieCopy(lang);
+  const doc = legalContent[lang].cookies;
+  const measurement = doc.sections[2];
+  const choice = doc.sections[3];
+  if (measurement) measurement.b = [copy.inactive];
+  if (choice) choice.b = [copy.intro, copy.retention];
+}
