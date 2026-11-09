@@ -20,6 +20,8 @@ export const Route = createFileRoute("/why-madagascar")({
         content: "A professional, competitive outsourcing destination for international businesses.",
       },
       { property: "og:url", content: "/why-madagascar" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/why-madagascar" }],
   }),
@@ -108,13 +110,6 @@ function WhyMadagascarPage() {
             className="mb-10"
           />
           <ListGrid items={securityPoints} />
-          <div className="mt-6 rounded-xl border border-dashed border-line bg-paper/60 p-6">
-            <p className="text-[14px] leading-relaxed text-muted-foreground">
-              [Reserved space — ISO certifications, GDPR-related processes, security certifications
-              and business continuity certifications will be published here once officially
-              obtained. No certification is claimed at this stage.]
-            </p>
-          </div>
         </section>
 
         <section className="border-t border-border py-16 md:py-20">

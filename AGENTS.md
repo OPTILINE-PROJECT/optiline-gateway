@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep confirmed office addresses in the central site configuration and the imported Careline map projection separate from the Contact view, so location selection and postal data stay consistent.
+- Keep browser-local cookie choices in the shared consent module and require purpose-specific valid consent before any optional tracker loads; this preserves opt-in and withdrawal across pages.
+- Reuse CookiePreferences in the first-visit dialog and cookie policy page so visitors edit the same consent choices everywhere.
