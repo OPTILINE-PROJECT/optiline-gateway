@@ -5,6 +5,7 @@ import { CTASection, ListGrid, PageHero, Pill, SectionHeading } from "@/componen
 import { internationalStandards, values } from "@/lib/content";
 
 export const Route = createFileRoute("/about")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "About Optiline Mada — Outsourcing Partner in Madagascar" },

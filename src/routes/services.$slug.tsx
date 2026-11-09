@@ -10,6 +10,7 @@ const serviceBanners: Record<Solution["slug"], { k: PhotoKey; caption: string }>
 };
 
 export const Route = createFileRoute("/services/$slug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const solution = solutions.find((s) => s.slug === params.slug);
     if (!solution) throw notFound();

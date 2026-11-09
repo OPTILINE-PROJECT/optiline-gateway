@@ -4,6 +4,7 @@ import { CTASection, PageHero } from "@/components/blocks";
 import { insights } from "@/lib/content";
 
 export const Route = createFileRoute("/insights")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Insights on Outsourcing in Madagascar — Optiline Mada" },

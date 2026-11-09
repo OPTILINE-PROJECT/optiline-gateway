@@ -3,6 +3,7 @@ import { CTASection, PageHero } from "@/components/blocks";
 import { insights } from "@/lib/content";
 
 export const Route = createFileRoute("/insights/$slug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const post = insights.find((p) => p.slug === params.slug);
     if (!post) throw notFound();

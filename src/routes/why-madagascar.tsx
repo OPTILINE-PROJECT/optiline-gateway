@@ -5,6 +5,7 @@ import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blo
 import { continuityPoints, internationalStandards, securityPoints, whyMadagascar } from "@/lib/content";
 
 export const Route = createFileRoute("/why-madagascar")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Why Madagascar for Outsourcing — Optiline Mada" },

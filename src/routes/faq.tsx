@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/faq")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Outsourcing FAQ — Optiline Mada Madagascar" },

@@ -147,6 +147,7 @@ function Marquee({
 }
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Outsourcing in Madagascar — Optiline Mada | Fully Managed Teams" },

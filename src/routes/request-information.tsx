@@ -6,6 +6,7 @@ import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
 export const Route = createFileRoute("/request-information")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Request Information — Outsourcing Proposal | Optiline Mada" },

@@ -8,6 +8,7 @@ import { careerCategories } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const Route = createFileRoute("/careers")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Careers at Optiline Mada — Jobs in Antananarivo, Madagascar" },

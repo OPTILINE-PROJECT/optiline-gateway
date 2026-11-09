@@ -10,6 +10,7 @@ import {
 } from "@/lib/industries";
 
 export const Route = createFileRoute("/industries/$slug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const industry = getIndustry(params.slug);
     if (!industry) throw notFound();
