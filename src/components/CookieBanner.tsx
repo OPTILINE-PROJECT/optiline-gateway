@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/i18n/language";
 import { Button } from "@/components/ui/button";
@@ -12,6 +12,16 @@ export function CookieBanner() {
   const c = cookieCopy(lang);
   const [visible, setVisible] = useState(false);
   const [customise, setCustomise] = useState(false);
+  const banner = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const element = banner.current;
+    const update = () => document.documentElement.style.setProperty("--cookie-banner-height", `${element?.getBoundingClientRect().height ?? 0}px`);
+    update();
+    const observer = new ResizeObserver(update);
+    if (element) observer.observe(element);
+    return () => { observer.disconnect(); document.documentElement.style.removeProperty("--cookie-banner-height"); };
+  }, [visible]);
 
   useEffect(() => {
     const sync = () => setVisible(!readCookieConsent());
@@ -29,7 +39,7 @@ export function CookieBanner() {
 
   return (
     <>
-      {visible ? <section aria-label={c.title} data-no-translate className="fixed inset-x-0 bottom-0 z-50 max-h-[85dvh] overflow-y-auto border-t border-line bg-card shadow-elevate">
+      {visible ? <section ref={banner} aria-label={c.title} data-no-translate className="fixed inset-x-0 bottom-0 z-50 max-h-[85dvh] overflow-y-auto border-t border-line bg-card shadow-elevate">
         <div className="mx-auto grid max-w-6xl gap-4 px-6 py-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div><h2 className="font-semibold text-foreground">{c.title}</h2><p className="mt-2 max-w-[75ch] text-sm text-muted-foreground">{c.intro} <Link to="/cookie-policy" className="text-blue underline">{c.policy}</Link></p></div>
           <div className="flex flex-wrap gap-2">

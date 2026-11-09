@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Check, Globe } from "lucide-react";
 import { CountryFlag } from "@/components/CountryFlag";
 import { Button } from "@/components/ui/button";
@@ -21,13 +21,9 @@ const copy = {
 };
 
 export function LanguageSwitcher() {
-  const { lang, setLang } = useLanguage();
+  const { lang, region: selectedRegion, setRegion } = useLanguage();
   const [open, setOpen] = useState(false);
-  const [regionId, setRegionId] = useState<string | null>(null);
-  useEffect(() => {
-    setRegionId(window.localStorage.getItem("optiline-language-region"));
-  }, []);
-  const current = languageRegions.find((region) => region.id === regionId && region.lang === lang)
+  const current = (selectedRegion?.lang === lang ? selectedRegion : undefined)
     ?? languageRegions.find((region) => region.id === defaultRegionByLanguage[lang]);
   if (!current) return null;
   const country = regionCountryName(current, lang);
@@ -56,9 +52,7 @@ export function LanguageSwitcher() {
               return (
                 <CommandItem key={region.id} value={region.id} keywords={[name, region.country, region.label, region.lang]}
                   className="cursor-pointer gap-2 px-3 py-2.5" onSelect={() => {
-                    setRegionId(region.id);
-                    window.localStorage.setItem("optiline-language-region", region.id);
-                    setLang(region.lang);
+                    setRegion(region);
                     setOpen(false);
                   }}>
                   <CountryFlag code={region.countryCode} className="h-4 w-6 shrink-0 rounded-[3px]" />

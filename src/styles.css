@@ -100,6 +100,10 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  input, select, textarea { min-width: 0; max-width: 100%; }
+  input[type="email"], input[type="tel"] { direction: ltr; }
+  a[href^="tel:"], a[href^="mailto:"] { unicode-bidi: isolate; }
+
   ::selection {
     background: color-mix(in oklab, var(--accent) 30%, transparent);
   }
@@ -222,3 +226,9 @@
   pointer-events: none;
 }
 .office-city-label-above { top: auto; bottom: 16px; }
+
+.form-actions { bottom: calc(var(--cookie-banner-height, 0px) + 12px); }
+.lead-form { padding-bottom: 10rem; }
+@media (max-width: 639px) {
+  .lead-form input, .lead-form select, .lead-form textarea { font-size: 16px; }
+}

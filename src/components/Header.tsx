@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/language";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   const { t } = useLanguage();
@@ -20,9 +21,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 shadow-[0_8px_30px_-24px_var(--navy)] backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto grid h-16 max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 sm:px-6 xl:grid-cols-[auto_minmax(0,1fr)_auto]">
         <Logo />
-        <nav className="hidden items-center gap-7 text-[13.5px] text-muted-foreground lg:flex">
+        <nav className="hidden min-w-0 items-center justify-center gap-4 text-[13px] text-muted-foreground xl:flex">
           {nav.map((item) => (
             <Link
               key={item.to}
@@ -35,7 +36,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex min-w-0 items-center gap-2">
           <LanguageSwitcher />
           <Link
             to="/request-information"
@@ -43,21 +44,21 @@ export function Header() {
           >
             {t("cta.buildTeam")}
           </Link>
-          <button
+          <Button variant="outline" size="icon"
             type="button"
             onClick={() => setOpen((o) => !o)}
             aria-label="Menu"
             aria-expanded={open}
-            className="flex size-9 flex-col items-center justify-center gap-1 rounded-md border border-line lg:hidden"
+            className="flex size-9 shrink-0 flex-col items-center justify-center gap-1 xl:hidden"
           >
             <span className="block h-px w-4 bg-foreground" />
             <span className="block h-px w-4 bg-foreground" />
             <span className="block h-px w-4 bg-foreground" />
-          </button>
+          </Button>
         </div>
       </div>
       {open && (
-        <nav className="border-t border-border bg-background px-6 py-4 lg:hidden">
+        <nav className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-6 py-4 xl:hidden">
           <ul className="space-y-1">
             {nav.map((item) => (
               <li key={item.to}>
