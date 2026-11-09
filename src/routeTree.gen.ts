@@ -12,14 +12,19 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as InfrastructureRouteImport } from './routes/infrastructure'
 import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as RequestAVisitRouteImport } from './routes/request-a-visit'
 import { Route as RequestInformationRouteImport } from './routes/request-information'
+import { Route as SecurityComplianceRouteImport } from './routes/security-compliance'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -48,6 +53,11 @@ const CareersRoute = CareersRouteImport.update({
   path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -63,14 +73,29 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesRoute = IndustriesRouteImport.update({
   id: '/industries',
   path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InfrastructureRoute = InfrastructureRouteImport.update({
+  id: '/infrastructure',
+  path: '/infrastructure',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InsightsRoute = InsightsRouteImport.update({
   id: '/insights',
   path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -86,6 +111,11 @@ const RequestAVisitRoute = RequestAVisitRouteImport.update({
 const RequestInformationRoute = RequestInformationRouteImport.update({
   id: '/request-information',
   path: '/request-information',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityComplianceRoute = SecurityComplianceRouteImport.update({
+  id: '/security-compliance',
+  path: '/security-compliance',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -154,14 +184,19 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/faq': typeof FaqRoute
+  '/how-it-works': typeof HowItWorksRoute
   '/industries': typeof IndustriesRouteWithChildren
+  '/infrastructure': typeof InfrastructureRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/request-a-visit': typeof RequestAVisitRoute
   '/request-information': typeof RequestInformationRoute
+  '/security-compliance': typeof SecurityComplianceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
@@ -179,12 +214,17 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/faq': typeof FaqRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/infrastructure': typeof InfrastructureRoute
+  '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/request-a-visit': typeof RequestAVisitRoute
   '/request-information': typeof RequestInformationRoute
+  '/security-compliance': typeof SecurityComplianceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
@@ -203,14 +243,19 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/faq': typeof FaqRoute
+  '/how-it-works': typeof HowItWorksRoute
   '/industries': typeof IndustriesRouteWithChildren
+  '/infrastructure': typeof InfrastructureRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/request-a-visit': typeof RequestAVisitRoute
   '/request-information': typeof RequestInformationRoute
+  '/security-compliance': typeof SecurityComplianceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
@@ -230,14 +275,19 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/careers'
+    | '/case-studies'
     | '/contact'
     | '/cookie-policy'
     | '/faq'
+    | '/how-it-works'
     | '/industries'
+    | '/infrastructure'
     | '/insights'
+    | '/pricing'
     | '/privacy-policy'
     | '/request-a-visit'
     | '/request-information'
+    | '/security-compliance'
     | '/sitemap.xml'
     | '/solutions'
     | '/terms'
@@ -255,12 +305,17 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/careers'
+    | '/case-studies'
     | '/contact'
     | '/cookie-policy'
     | '/faq'
+    | '/how-it-works'
+    | '/infrastructure'
+    | '/pricing'
     | '/privacy-policy'
     | '/request-a-visit'
     | '/request-information'
+    | '/security-compliance'
     | '/sitemap.xml'
     | '/solutions'
     | '/terms'
@@ -278,14 +333,19 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/careers'
+    | '/case-studies'
     | '/contact'
     | '/cookie-policy'
     | '/faq'
+    | '/how-it-works'
     | '/industries'
+    | '/infrastructure'
     | '/insights'
+    | '/pricing'
     | '/privacy-policy'
     | '/request-a-visit'
     | '/request-information'
+    | '/security-compliance'
     | '/sitemap.xml'
     | '/solutions'
     | '/terms'
@@ -304,14 +364,19 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CareersRoute: typeof CareersRoute
+  CaseStudiesRoute: typeof CaseStudiesRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   FaqRoute: typeof FaqRoute
+  HowItWorksRoute: typeof HowItWorksRoute
   IndustriesRoute: typeof IndustriesRouteWithChildren
+  InfrastructureRoute: typeof InfrastructureRoute
   InsightsRoute: typeof InsightsRouteWithChildren
+  PricingRoute: typeof PricingRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RequestAVisitRoute: typeof RequestAVisitRoute
   RequestInformationRoute: typeof RequestInformationRoute
+  SecurityComplianceRoute: typeof SecurityComplianceRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolutionsRoute: typeof SolutionsRoute
   TermsRoute: typeof TermsRoute
@@ -345,6 +410,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -366,6 +438,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries': {
       id: '/industries'
       path: '/industries'
@@ -373,11 +452,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/infrastructure': {
+      id: '/infrastructure'
+      path: '/infrastructure'
+      fullPath: '/infrastructure'
+      preLoaderRoute: typeof InfrastructureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/insights': {
       id: '/insights'
       path: '/insights'
       fullPath: '/insights'
       preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -399,6 +492,13 @@ declare module '@tanstack/react-router' {
       path: '/request-information'
       fullPath: '/request-information'
       preLoaderRoute: typeof RequestInformationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security-compliance': {
+      id: '/security-compliance'
+      path: '/security-compliance'
+      fullPath: '/security-compliance'
+      preLoaderRoute: typeof SecurityComplianceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -520,14 +620,19 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CareersRoute: CareersRoute,
+  CaseStudiesRoute: CaseStudiesRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   FaqRoute: FaqRoute,
+  HowItWorksRoute: HowItWorksRoute,
   IndustriesRoute: IndustriesRouteWithChildren,
+  InfrastructureRoute: InfrastructureRoute,
   InsightsRoute: InsightsRouteWithChildren,
+  PricingRoute: PricingRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RequestAVisitRoute: RequestAVisitRoute,
   RequestInformationRoute: RequestInformationRoute,
+  SecurityComplianceRoute: SecurityComplianceRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolutionsRoute: SolutionsRoute,
   TermsRoute: TermsRoute,
