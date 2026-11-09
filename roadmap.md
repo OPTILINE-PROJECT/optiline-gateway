@@ -1,4 +1,7 @@
 # Tasks
+- [ ] Keep consent and submission visible on the first screen of all four forms.
+- [ ] Audit all content pages on mobile and correct layout issues.
+- [ ] Detect first-visit country/language while preserving explicit choices; test default selection.
 - [x] Translate the entire site into Hebrew, add Israel to the language menu, and verify right-to-left pages and saved selection.
 - [x] Verify all four website forms email contact@optiline-mada.com and accurately report send failures.
 - [x] Correct requested copy and translate partner/service captions in all eight languages.
