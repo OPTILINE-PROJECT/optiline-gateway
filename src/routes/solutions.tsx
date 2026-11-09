@@ -4,6 +4,7 @@ import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blo
 import { customisableItems, solutions, teamSizes } from "@/lib/content";
 
 export const Route = createFileRoute("/solutions")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Outsourcing Solutions in Madagascar — Optiline Mada" },

@@ -242,7 +242,7 @@ export const industries: Industry[] = [
         a: "Yes. Many engagements start with one or two positions and grow once the collaboration is established.",
       },
     ],
-    seoTitle: "IT & SaaS Outsourcing Madagascar — Developers & Support | Optiline Mada",
+    seoTitle: "IT & SaaS Outsourcing Madagascar — Dev & Support | Optiline Mada",
     seoDescription:
       "Outsource software development and technical support to Madagascar: dedicated developers, help desk and customer success teams for SaaS companies.",
     keywords: ["IT outsourcing Madagascar", "dedicated developers", "technical support outsourcing", "SaaS customer support"],
@@ -372,7 +372,7 @@ export const industries: Industry[] = [
         a: "Capacity depends on the number of positions you open. We size the team with you from your volumes and adjust over time.",
       },
     ],
-    seoTitle: "Insurance Outsourcing Madagascar — Policy & Claims Support | Optiline Mada",
+    seoTitle: "Insurance Outsourcing Madagascar — Policy & Claims | Optiline Mada",
     seoDescription:
       "Outsource insurance back office and customer service to Madagascar: policy administration, claims intake and French-speaking support teams.",
     keywords: ["insurance outsourcing", "claims processing outsourcing", "French speaking outsourcing", "BPO Madagascar"],
@@ -632,7 +632,7 @@ export const industries: Industry[] = [
         a: "Yes. Booking processing, invoicing support, supplier coordination and reporting can be part of the same dedicated team or a separate one.",
       },
     ],
-    seoTitle: "Travel & Hospitality Customer Service Outsourcing Madagascar | Optiline Mada",
+    seoTitle: "Travel & Hospitality Outsourcing Madagascar | Optiline Mada",
     seoDescription:
       "Outsource travel customer service to Madagascar: multilingual reservation, modification and traveler-assistance teams with extended-hour coverage.",
     keywords: ["travel customer service outsourcing", "multilingual customer support", "call center Madagascar", "reservation outsourcing"],
@@ -697,7 +697,7 @@ export const industries: Industry[] = [
         a: "After the needs analysis we provide a calendar covering recruitment, training and go-live, adapted to the number of positions.",
       },
     ],
-    seoTitle: "Real Estate Outsourcing Madagascar — Lead Qualification & Admin | Optiline Mada",
+    seoTitle: "Real Estate Outsourcing Madagascar — Leads & Admin | Optiline Mada",
     seoDescription:
       "Outsource real estate support to Madagascar: lead qualification, appointment setting, tenant support and property administration by dedicated teams.",
     keywords: ["real estate outsourcing", "appointment setting services", "lead qualification", "back office outsourcing"],
@@ -762,7 +762,7 @@ export const industries: Industry[] = [
         a: "Yes. You can start with one assistant and extend to a structured back-office team as needs grow.",
       },
     ],
-    seoTitle: "Professional Services Outsourcing Madagascar — Back Office | Optiline Mada",
+    seoTitle: "Professional Services Outsourcing Madagascar | Optiline Mada",
     seoDescription:
       "Outsource back office and administration to Madagascar: dedicated assistants, document production and client support for firms and agencies.",
     keywords: ["back office outsourcing", "dedicated assistant", "administrative outsourcing", "BPO Madagascar"],
@@ -892,7 +892,7 @@ export const industries: Industry[] = [
         a: "Yes, as soon as you have a recurring workload to delegate — support, operations, data or development. The needs analysis confirms the fit.",
       },
     ],
-    seoTitle: "Startup Outsourcing Madagascar — Flexible Dedicated Teams | Optiline Mada",
+    seoTitle: "Startup Outsourcing Madagascar — Flexible Teams | Optiline Mada",
     seoDescription:
       "Flexible outsourcing for startups in Madagascar: customer support, operations and developers that scale with your growth, fully managed.",
     keywords: ["startup outsourcing", "dedicated teams Madagascar", "offshore outsourcing services", "customer support outsourcing"],
@@ -1152,7 +1152,7 @@ export const industries: Industry[] = [
         a: "Local supervision performs regular quality checks against your criteria, with recurring reporting on volumes, handling and quality results.",
       },
     ],
-    seoTitle: "Energy & Utilities Customer Service Outsourcing Madagascar | Optiline Mada",
+    seoTitle: "Energy & Utilities Outsourcing Madagascar | Optiline Mada",
     seoDescription:
       "Outsource utility customer operations to Madagascar: contract administration, billing inquiries and customer service teams for energy providers.",
     keywords: ["utilities outsourcing", "customer service outsourcing", "call center Madagascar", "BPO Madagascar"],
@@ -1274,7 +1274,7 @@ export const industries: Industry[] = [
         a: "French and English are standard. Other languages can be studied depending on your communities and markets.",
       },
       {
-        q: "Can you prepare our client reports?",
+        q: "Can you prepare client reports and dashboards?",
         a: "Yes. Reporting profiles prepare recurring dashboards and reports from your data sources, following your templates.",
       },
       {
@@ -1282,7 +1282,7 @@ export const industries: Industry[] = [
         a: "Yes. Reinforcement is planned with you for campaign peaks so operations keep pace.",
       },
     ],
-    seoTitle: "Media & Digital Marketing Operations Outsourcing Madagascar | Optiline Mada",
+    seoTitle: "Marketing Operations Outsourcing Madagascar | Optiline Mada",
     seoDescription:
       "Outsource marketing operations to Madagascar: campaign support, content moderation, data and reporting teams for agencies and advertisers.",
     keywords: ["marketing operations outsourcing", "content moderation services", "back office outsourcing", "BPO Madagascar"],
@@ -1347,7 +1347,7 @@ export const industries: Industry[] = [
         a: "Yes. Loyalty administration, data entry and member support are standard back-office missions.",
       },
     ],
-    seoTitle: "Food & Beverage Customer Service Outsourcing Madagascar | Optiline Mada",
+    seoTitle: "Food & Beverage Outsourcing Madagascar | Optiline Mada",
     seoDescription:
       "Outsource food and beverage customer service to Madagascar: order support, complaint handling and administration for brands and restaurant networks.",
     keywords: ["food industry outsourcing", "customer service outsourcing", "call center Madagascar", "back office outsourcing"],
