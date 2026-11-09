@@ -3,7 +3,7 @@ import { PhotoBanner } from "@/components/PhotoGallery";
 import { OfficeLocations } from "@/components/OfficeLocations";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeading } from "@/components/blocks";
-import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
+import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
@@ -32,17 +32,20 @@ function ContactPage() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
+    setFailed(false);
     const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-    await submitLead(
+    const delivered = await submitLead(
       { ...data, date: new Date().toISOString(), source: "contact", language: lang },
       site.leadEndpoint,
     );
     setBusy(false);
-    setSent(true);
+    setSent(delivered);
+    setFailed(!delivered);
   }
 
   return (
@@ -161,6 +164,7 @@ function ContactPage() {
                   <input type="checkbox" name="consent" required className="mt-1 size-4 accent-[var(--blue)]" />
                   <span>I agree to be contacted by Optiline Mada regarding my request.</span>
                 </label>
+                {failed && <FormSubmissionError />}
                 <SubmitButton disabled={busy}>{busy ? "Sending…" : "Send Message"}</SubmitButton>
               </form>
             )}

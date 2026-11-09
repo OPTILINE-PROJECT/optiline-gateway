@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Pill, SectionHeading } from "@/components/blocks";
-import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
+import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { careerCategories } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -23,6 +23,8 @@ export const Route = createFileRoute("/careers")({
         content: "Career opportunities with an international outsourcing partner in Madagascar.",
       },
       { property: "og:url", content: "/careers" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/careers" }],
   }),
@@ -33,16 +35,18 @@ function CareersPage() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
+    setFailed(false);
     const form = new FormData(e.currentTarget);
     const cv = form.get("cv");
     const data = Object.fromEntries(
       Array.from(form.entries()).filter(([k]) => k !== "cv"),
     ) as Record<string, string>;
-    await submitLead(
+    const delivered = await submitLead(
       {
         ...data,
         cvFileName: cv instanceof File ? cv.name : "",
@@ -53,7 +57,8 @@ function CareersPage() {
       site.leadEndpoint,
     );
     setBusy(false);
-    setSent(true);
+    setSent(delivered);
+    setFailed(!delivered);
   }
 
   return (
@@ -111,7 +116,8 @@ function CareersPage() {
               <Field label="Message" htmlFor="message">
                 <textarea id="message" name="message" rows={5} className={inputClass} />
               </Field>
-              <SubmitButton disabled={busy}>{busy ? "Sending…" : "Apply Now"}</SubmitButton>
+              {failed && <FormSubmissionError />}
+                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Apply Now"}</SubmitButton>
             </form>
           )}
         </section>

@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import officeTeam from "@/assets/office-team.jpg";
-import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
+import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
@@ -21,6 +21,8 @@ export const Route = createFileRoute("/request-information")({
         content: "Get a custom outsourcing proposal for your team in Madagascar.",
       },
       { property: "og:url", content: "/request-information" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/request-information" }],
   }),
@@ -31,17 +33,20 @@ function RequestInformationPage() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
+    setFailed(false);
     const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-    await submitLead(
+    const delivered = await submitLead(
       { ...data, date: new Date().toISOString(), source: "request-information", language: lang },
       site.leadEndpoint,
     );
     setBusy(false);
-    setSent(true);
+    setSent(delivered);
+    setFailed(!delivered);
   }
 
   if (sent) {
@@ -183,7 +188,8 @@ function RequestInformationPage() {
               <input type="checkbox" name="consent" required className="mt-0.5 size-4 accent-[var(--blue)]" />
               <span>I agree to be contacted by Optiline Mada regarding my request.</span>
             </label>
-            <SubmitButton disabled={busy}>{busy ? "Sending…" : "Request Information"}</SubmitButton>
+            {failed && <FormSubmissionError />}
+                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Request Information"}</SubmitButton>
           </div>
         </form>
 

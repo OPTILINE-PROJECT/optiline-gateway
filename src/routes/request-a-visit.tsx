@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/blocks";
-import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
+import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
@@ -21,6 +21,8 @@ export const Route = createFileRoute("/request-a-visit")({
         content: "Request a guided visit of our offices and operations in Madagascar.",
       },
       { property: "og:url", content: "/request-a-visit" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/request-a-visit" }],
   }),
@@ -31,17 +33,20 @@ function RequestVisitPage() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
+    setFailed(false);
     const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-    await submitLead(
+    const delivered = await submitLead(
       { ...data, date: new Date().toISOString(), source: "request-a-visit", language: lang },
       site.leadEndpoint,
     );
     setBusy(false);
-    setSent(true);
+    setSent(delivered);
+    setFailed(!delivered);
   }
 
   if (sent) {
@@ -99,7 +104,8 @@ function RequestVisitPage() {
           <Field label="Message" htmlFor="message">
             <textarea id="message" name="message" rows={5} className={inputClass} />
           </Field>
-          <SubmitButton disabled={busy}>{busy ? "Sending…" : "Schedule a Visit"}</SubmitButton>
+          {failed && <FormSubmissionError />}
+                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Schedule a Visit"}</SubmitButton>
         </form>
       </div>
     </>
