@@ -1,5 +1,5 @@
 # Tasks
-- [ ] Translate the entire site into Hebrew, add Israel to the language menu, and verify right-to-left pages and saved selection.
+- [x] Translate the entire site into Hebrew, add Israel to the language menu, and verify right-to-left pages and saved selection.
 - [x] Verify all four website forms email contact@optiline-mada.com and accurately report send failures.
 - [x] Correct requested copy and translate partner/service captions in all eight languages.
 - [x] Remove certification placeholder and arrows beneath office addresses.

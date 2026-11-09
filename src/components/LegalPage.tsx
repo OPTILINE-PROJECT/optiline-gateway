@@ -106,13 +106,13 @@ export function LegalPage({ page, preferences }: { page: LegalPageKey; preferenc
                   </p>
                   <p>
                     {c.labels.france}:{" "}
-                    <a href={legal.phoneFrance.href} className={linkClass}>
+                    <a dir="ltr" href={legal.phoneFrance.href} className={`inline-block ${linkClass}`}>
                       {legal.phoneFrance.label}
                     </a>
                   </p>
                   <p>
                     {c.labels.madagascar}:{" "}
-                    <a href={legal.phoneMadagascar.href} className={linkClass}>
+                    <a dir="ltr" href={legal.phoneMadagascar.href} className={`inline-block ${linkClass}`}>
                       {legal.phoneMadagascar.label}
                     </a>
                   </p>
