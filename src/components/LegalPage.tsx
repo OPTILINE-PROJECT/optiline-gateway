@@ -44,7 +44,7 @@ function H2({ children }: { children: ReactNode }) {
   return <h2 className="pt-2 text-[19px] font-bold tracking-tight text-foreground">{children}</h2>;
 }
 
-export function LegalPage({ page }: { page: LegalPageKey }) {
+export function LegalPage({ page, preferences }: { page: LegalPageKey; preferences?: ReactNode }) {
   const { lang } = useLanguage();
   const c = legalContent[lang] ?? legalContent.en;
   const doc = c[page];
@@ -61,6 +61,7 @@ export function LegalPage({ page }: { page: LegalPageKey }) {
           <p>
             <Rich text={doc.intro} privacyLabel={c.privacyLink} />
           </p>
+          {preferences}
 
           {doc.sections.map((s) => (
             <Fragment key={s.h}>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Globe2, MapPin } from "lucide-react";
+import { Globe2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Flag } from "@/components/Flag";
 import { useLanguage } from "@/i18n/language";
@@ -35,7 +35,6 @@ export function OfficeLocations() {
   const active = offices.find((office) => office.id === selected) ?? offices[0];
   const c = copy[lang];
   const country = (index: number) => countries[lang][index];
-  const locationUrl = (address: string) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
   return (
     <section aria-labelledby="offices-title" className="border-t border-line py-16 md:py-20" data-no-translate>
@@ -69,9 +68,6 @@ export function OfficeLocations() {
           <p className="text-xs font-medium uppercase text-muted-foreground">{country(offices.indexOf(active))}</p>
           <h3 className="mt-2 flex items-center gap-2 text-xl font-bold text-foreground"><Flag code={flagCodes[offices.indexOf(active)]} />{active.city}</h3>
           <address className="mt-3 text-sm not-italic leading-relaxed text-muted-foreground">{active.address}</address>
-          <Button asChild variant="ghost" size="icon" className="mt-3 text-blue">
-            <a href={locationUrl(active.address)} aria-label={`${c.map} — ${active.city}`} title={`${c.map} — ${active.city}`} target="_blank" rel="noopener noreferrer"><ArrowUpRight /></a>
-          </Button>
         </div>
       </div>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +79,6 @@ export function OfficeLocations() {
             </div>
             <p className="text-xs text-muted-foreground">{country(index)}</p>
             <address className="my-4 text-sm not-italic leading-relaxed text-foreground">{office.address}</address>
-            <Button asChild variant="ghost" size="icon" className="mt-auto text-blue"><a href={locationUrl(office.address)} aria-label={`${c.map} — ${office.city}`} title={`${c.map} — ${office.city}`} target="_blank" rel="noopener noreferrer"><ArrowUpRight /></a></Button>
           </article>
         ))}
       </div>
