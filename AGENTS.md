@@ -18,3 +18,4 @@
 - Keep text direction in the shared language-direction helper so the document and native language labels consistently support every RTL language.
 - Use shared FormActions for the single consent checkbox and submit control on each lead form; offset it by the measured cookie banner to keep both controls unobscured.
 - Resolve automatic country-language defaults from coarse request country metadata and browser languages; explicit browser-local selections always take precedence, with no external geolocation service or retained IP.
+- Security headers (HSTS, CSP report-only, nosniff, referrer, permissions, frame, COOP) live in the request middleware in src/start.ts; CSP violations are collected by /api/csp-report before switching CSP_REPORT_ONLY to false. Why: one enforced policy for every response, with a report phase to avoid breaking legitimate assets.
