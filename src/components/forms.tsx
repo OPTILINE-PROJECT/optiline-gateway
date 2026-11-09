@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/language";
 export function FormSubmissionError() {
   const { lang } = useLanguage();
   const messages = {
+    he: "לא ניתן היה לשלוח את הבקשה שלכם בדוא״ל. נסו שוב או פנו ישירות לכתובת contact@optiline-mada.com.",
     en: "Your request could not be emailed. Please try again or contact contact@optiline-mada.com directly.",
     fr: "Votre demande n’a pas pu être envoyée par e-mail. Réessayez ou contactez directement contact@optiline-mada.com.",
     es: "No se pudo enviar su solicitud por correo. Inténtelo de nuevo o contacte directamente con contact@optiline-mada.com.",

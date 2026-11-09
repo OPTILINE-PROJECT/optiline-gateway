@@ -7,6 +7,7 @@ export const languages = [
   { code: "pt", label: "Português", short: "PT" },
   { code: "nl", label: "Nederlands", short: "NL" },
   { code: "ar", label: "العربية", short: "AR" },
+  { code: "he", label: "עברית", short: "HE" },
 ] as const;
 
 export type LanguageCode = (typeof languages)[number]["code"];
@@ -16,6 +17,36 @@ export type LanguageCode = (typeof languages)[number]["code"];
  * key that is not yet translated — add new keys to `en` first.
  */
 export const translations: Record<LanguageCode, Record<string, string>> = {
+  he: {
+    "nav.home": "דף הבית",
+    "nav.solutions": "פתרונות",
+    "nav.whyMadagascar": "למה מדגסקר",
+    "nav.about": "אודותינו",
+    "nav.industries": "ענפים",
+    "nav.insights": "מאמרים",
+    "nav.contact": "יצירת קשר",
+    "cta.buildTeam": "בנו את הצוות שלכם",
+    "cta.requestInfo": "בקשת מידע",
+    "cta.talkToTeam": "דברו עם הצוות שלנו",
+    "cta.letsTalk": "בואו נדבר",
+    "cta.designSolution": "תכנון הפתרון שלי",
+    "hero.title": "הצוות שלכם במדגסקר.",
+    "hero.titleAccent": "בניהול מלא.",
+    "hero.subtitle": "בנו את הצוות שלכם במדגסקר ללא המורכבות. Optiline Mada מספקת אנשי מקצוע מיומנים, מרחבי עבודה מודרניים, טכנולוגיה אמינה וניהול מקומי מלא — הכול תחת קורת גג אחת.",
+    "hero.badge1": "ניסיון בינלאומי",
+    "hero.badge2": "תשתית אמינה",
+    "hero.badge3": "ניהול מלא",
+    "final.title": "מוכנים לבנות את הצוות שלכם במדגסקר?",
+    "final.subtitle": "ספרו לנו מה אתם צריכים. אנחנו נדאג לכל השאר.",
+    "footer.solutions": "פתרונות",
+    "footer.company": "החברה",
+    "footer.resources": "משאבים",
+    "footer.legal": "מידע משפטי",
+    "footer.blurb": "שותף מוביל למיקור חוץ עבור עסקים בינלאומיים המתרחבים למדגסקר.",
+    "cookies.text": "אנו משתמשים בעוגיות להפעלת האתר ולמדידת הביקורים בו. תוכלו לאשר או לדחות עוגיות שאינן חיוניות.",
+    "cookies.accept": "אישור",
+    "cookies.decline": "דחייה",
+  },
   en: {
     "nav.home": "Home",
     "nav.solutions": "Solutions",
