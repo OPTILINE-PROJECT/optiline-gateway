@@ -34,7 +34,8 @@ export const Route = createFileRoute("/industries/$slug")({
         { property: "og:title", content: industry.heroTitle },
         { property: "og:description", content: industry.seoDescription },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: url },
+        { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: url },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [

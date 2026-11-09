@@ -18,6 +18,8 @@ export const Route = createFileRoute("/insights/")({
         property: "og:description",
         content: "Practical perspectives on outsourcing, remote teams and operations in Madagascar.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/insights" },
     ],
     links: [{ rel: "canonical", href: "/insights" }],

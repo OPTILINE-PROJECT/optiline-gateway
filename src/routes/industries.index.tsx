@@ -25,6 +25,7 @@ export const Route = createFileRoute("/industries/")({
           "Explore how companies in 20 sectors outsource customer service, IT and back-office operations to managed teams in Madagascar.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/industries" },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
