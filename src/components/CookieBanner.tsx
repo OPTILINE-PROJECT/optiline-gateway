@@ -48,7 +48,7 @@ export function CookieBanner() {
             <Button variant="outline" onClick={() => setCustomise(true)}>{c.customise}</Button>
           </div>
         </div>
-      </section> : <Button variant="outline" className="fixed bottom-4 start-4 z-40 h-auto min-h-9 max-w-[calc(100vw-8rem)] whitespace-normal bg-card text-xs" data-no-translate onClick={() => setCustomise(true)}>{c.settings}</Button>}
+      </section> : <Button ref={banner} variant="outline" className="fixed bottom-4 start-4 z-40 h-auto min-h-9 max-w-[calc(100vw-8rem)] whitespace-normal bg-card text-xs" data-no-translate onClick={() => setCustomise(true)}>{c.settings}</Button>}
       <Dialog open={customise} onOpenChange={setCustomise}>
         <DialogContent className="max-h-[90dvh] w-[calc(100%-2rem)] overflow-y-auto bg-card" data-no-translate>
           <DialogTitle>{c.title}</DialogTitle>
