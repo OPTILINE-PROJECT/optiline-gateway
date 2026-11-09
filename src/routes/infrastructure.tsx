@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blocks";
-import { infrastructure, infrastructureStats } from "@/lib/site";
+import { infrastructure } from "@/lib/content";
+import { infrastructureStats } from "@/lib/site";
 
 export const Route = createFileRoute("/infrastructure")({
   staticData: { sitemap: true },

@@ -5,6 +5,7 @@ import { createFileRoute } from "@tanstack/react-router";
  * Logs the violation for review; stores nothing and returns no data.
  */
 export const Route = createFileRoute("/api/csp-report")({
+  staticData: { sitemap: false },
   server: {
     handlers: {
       POST: async ({ request }) => {
