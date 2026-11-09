@@ -1,5 +1,21 @@
 import { sendLeadEmail } from "@/lib/leads.functions";
 import type { ReactNode } from "react";
+import { useLanguage } from "@/i18n/language";
+
+export function FormSubmissionError() {
+  const { lang } = useLanguage();
+  const messages = {
+    en: "Your request could not be emailed. Please try again or contact contact@optiline-mada.com directly.",
+    fr: "Votre demande n’a pas pu être envoyée par e-mail. Réessayez ou contactez directement contact@optiline-mada.com.",
+    es: "No se pudo enviar su solicitud por correo. Inténtelo de nuevo o contacte directamente con contact@optiline-mada.com.",
+    de: "Ihre Anfrage konnte nicht per E-Mail gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie contact@optiline-mada.com direkt.",
+    it: "Non è stato possibile inviare la richiesta per e-mail. Riprova o contatta direttamente contact@optiline-mada.com.",
+    pt: "Não foi possível enviar o pedido por email. Tente novamente ou contacte diretamente contact@optiline-mada.com.",
+    nl: "Uw aanvraag kon niet per e-mail worden verzonden. Probeer opnieuw of neem rechtstreeks contact op via contact@optiline-mada.com.",
+    ar: "تعذر إرسال طلبك بالبريد الإلكتروني. يرجى المحاولة مجددًا أو التواصل مباشرة عبر contact@optiline-mada.com.",
+  };
+  return <p role="alert" className="text-sm text-destructive" data-no-translate>{messages[lang]}</p>;
+}
 
 export function Field({
   label,
@@ -50,15 +66,12 @@ export type Lead = {
 };
 
 export async function submitLead(lead: Lead, endpoint: string) {
+  let sent = false;
   try {
     const res = await sendLeadEmail({ data: lead });
-    if (!res.ok) throw new Error("Lead email not sent");
+    sent = res.ok;
   } catch (e) {
-    // Email failed: keep the lead locally so nothing is lost.
-    console.error("Lead email failed", e);
-    const stored = JSON.parse(window.localStorage.getItem("optiline-leads") ?? "[]");
-    stored.push(lead);
-    window.localStorage.setItem("optiline-leads", JSON.stringify(stored));
+    console.error("Lead email failed");
   }
   if (endpoint) {
     await fetch(endpoint, {
@@ -67,4 +80,5 @@ export async function submitLead(lead: Lead, endpoint: string) {
       body: JSON.stringify(lead),
     }).catch((e) => console.error("Lead webhook failed", e));
   }
+  return sent;
 }
