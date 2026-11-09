@@ -120,6 +120,76 @@ function WhyMadagascarPage() {
           />
           <ListGrid items={continuityPoints} />
         </section>
+        <section className="border-t border-border py-16 md:py-20">
+          <SectionHeading
+            eyebrow="Comparison"
+            title="Madagascar vs other outsourcing destinations"
+            intro="An outsourcing destination is the country where your external team is physically based — its time zone, languages and costs shape your daily collaboration."
+            className="mb-10"
+          />
+          <div className="overflow-x-auto rounded-xl border border-line">
+            <table className="w-full min-w-[760px] border-collapse text-left text-[14px]">
+              <thead>
+                <tr className="bg-navy text-navy-foreground">
+                  <th className="px-4 py-3.5 font-semibold">Criterion</th>
+                  <th className="px-4 py-3.5 font-semibold">Madagascar</th>
+                  <th className="px-4 py-3.5 font-semibold">India</th>
+                  <th className="px-4 py-3.5 font-semibold">Philippines</th>
+                  <th className="px-4 py-3.5 font-semibold">Morocco</th>
+                  <th className="px-4 py-3.5 font-semibold">Tunisia</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line text-foreground">
+                <tr>
+                  <td className="px-4 py-3.5 font-medium">Time zone vs Europe</td>
+                  <td className="px-4 py-3.5">UTC+3 — 1–2 h ahead of Central Europe</td>
+                  <td className="px-4 py-3.5">UTC+5:30</td>
+                  <td className="px-4 py-3.5">UTC+8</td>
+                  <td className="px-4 py-3.5">UTC+1</td>
+                  <td className="px-4 py-3.5">UTC+1</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3.5 font-medium">French-language talent</td>
+                  <td className="px-4 py-3.5">Widely spoken, administrative language</td>
+                  <td className="px-4 py-3.5">Limited</td>
+                  <td className="px-4 py-3.5">Limited</td>
+                  <td className="px-4 py-3.5">Widely spoken</td>
+                  <td className="px-4 py-3.5">Widely spoken</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3.5 font-medium">English-language talent</td>
+                  <td className="px-4 py-3.5">Growing</td>
+                  <td className="px-4 py-3.5">Extensive</td>
+                  <td className="px-4 py-3.5">Extensive</td>
+                  <td className="px-4 py-3.5">Moderate</td>
+                  <td className="px-4 py-3.5">Moderate</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3.5 font-medium">Operating cost</td>
+                  <td className="px-4 py-3.5">Very competitive</td>
+                  <td className="px-4 py-3.5">Very competitive</td>
+                  <td className="px-4 py-3.5">Very competitive</td>
+                  <td className="px-4 py-3.5">Moderate</td>
+                  <td className="px-4 py-3.5">Moderate</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3.5 font-medium">Best fit</td>
+                  <td className="px-4 py-3.5">Francophone & European-hour operations</td>
+                  <td className="px-4 py-3.5">Large-scale English operations</td>
+                  <td className="px-4 py-3.5">Large-scale English operations</td>
+                  <td className="px-4 py-3.5">Francophone nearshore</td>
+                  <td className="px-4 py-3.5">Francophone nearshore</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-8 max-w-3xl text-[15px] leading-relaxed text-foreground">
+            Our verdict: for French-speaking customer operations and back-office work aligned with European
+            working hours, Madagascar offers the strongest combination of language, time zone and cost. For
+            very large English-only operations, India and the Philippines remain the references.
+          </p>
+        </section>
+
         <PhotoBanner k="antsirabe" caption="Antsirabe, Madagascar" />
       </div>
 

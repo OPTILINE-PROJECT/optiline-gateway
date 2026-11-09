@@ -69,6 +69,10 @@ export function Footer() {
           </p>
           <ul className="space-y-2.5 text-[14px]">
             <li><Link to="/about" className="text-navy-foreground/70 hover:text-navy-foreground">About Us</Link></li>
+            <li><Link to="/how-it-works" className="text-navy-foreground/70 hover:text-navy-foreground">How It Works</Link></li>
+            <li><Link to="/infrastructure" className="text-navy-foreground/70 hover:text-navy-foreground">Infrastructure</Link></li>
+            <li><Link to="/security-compliance" className="text-navy-foreground/70 hover:text-navy-foreground">Security & Compliance</Link></li>
+            <li><Link to="/case-studies" className="text-navy-foreground/70 hover:text-navy-foreground">Case Studies</Link></li>
             <li><Link to="/careers" className="text-navy-foreground/70 hover:text-navy-foreground">Careers</Link></li>
             <li><Link to="/insights" className="text-navy-foreground/70 hover:text-navy-foreground">Insights</Link></li>
             <li><Link to="/contact" className="text-navy-foreground/70 hover:text-navy-foreground">Contact</Link></li>
@@ -80,6 +84,7 @@ export function Footer() {
             {t("footer.resources")}
           </p>
           <ul className="space-y-2.5 text-[14px]">
+            <li><Link to="/pricing" className="text-navy-foreground/70 hover:text-navy-foreground">Pricing</Link></li>
             <li><Link to="/faq" className="text-navy-foreground/70 hover:text-navy-foreground">FAQ</Link></li>
             <li><Link to="/request-information" className="text-navy-foreground/70 hover:text-navy-foreground">Request Information</Link></li>
             <li><Link to="/request-a-visit" className="text-navy-foreground/70 hover:text-navy-foreground">Request a Visit</Link></li>

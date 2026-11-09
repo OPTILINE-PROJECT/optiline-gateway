@@ -1,6 +1,6 @@
 # Optiline Mada
 
-> Managed outsourcing teams in Madagascar: customer service, IT development and back-office operations, fully managed end to end.
+> French-speaking outsourcing and fully managed teams in Madagascar for international companies.
 
 Optiline Mada builds and manages dedicated teams in Madagascar for international companies.
 Recruitment, workspace, equipment, HR, local supervision and administration are handled by Optiline Mada —
@@ -10,25 +10,45 @@ Core offer: dedicated teleconsultant teams (from €690 / month), dedicated deve
 dedicated assistants (from €590 / month). English, French and Malagasy-speaking collaborators,
 with additional languages available depending on the market.
 
-## Pages
+## Key facts
 
-- [Home](/): Positioning, offer overview and how the managed model works.
-- [Solutions](/solutions): The three outsourcing solutions and their scope.
-- [Why Madagascar](/why-madagascar): Cost, talent, time-zone and infrastructure arguments.
-- [About](/about): The company, the manager and the operating model.
-- [Industries](/industries): Portal listing the 20 supported sectors.
-- [Insights](/insights): Articles on outsourcing, BPO and offshoring.
-- [Contact](/contact): Contact details, office locations and map.
-- [FAQ](/faq): Frequent questions about outsourcing to Madagascar.
-- [Careers](/careers): Recruiting and working at Optiline Mada.
-- [Request Information](/request-information): B2B brief form for a proposal.
-- [Request a Visit](/request-a-visit): On-site visit request in Antsirabe.
+- Capacity: 3,000 scalable workstations, 6,000+ agents across 2 shifts.
+- Connectivity: up to 10 Gbps dual-fiber Internet with backup connection and power backup.
+- Operations: 24/7 coverage possible; time zone UTC+3, 1–2 hours ahead of Central Europe.
+- Languages: French widely spoken (administrative language), English growing, Malagasy native.
+- Team with 25+ years of international experience; 10+ industries served.
+- Legal framework: Malagasy Law No. 2014-038 on personal data protection; GDPR for European clients.
 
 ## Services
 
 - [Call Center & Customer Service](/services/call-center): Inbound and outbound customer operations.
 - [IT & Development](/services/it-development): Dedicated developers and technical support.
 - [Administrative Outsourcing](/services/administrative-outsourcing): Back-office and administrative assistants.
+
+## Pages
+
+- [Home](/): Positioning, offer overview and how the managed model works.
+- [Solutions](/solutions): The three outsourcing solutions and their scope.
+- [Pricing](/pricing): Starting prices per dedicated position and what is included.
+- [How It Works](/how-it-works): Five steps from brief to operational team.
+- [Why Madagascar](/why-madagascar): Cost, talent, time-zone arguments and destination comparison.
+- [Infrastructure](/infrastructure): Connectivity, workstations, continuity — in facts.
+- [Security & Compliance](/security-compliance): NDAs, access control, supervision, legal framework.
+- [Case Studies](/case-studies): Documented client operations (published with client consent).
+- [About](/about): The company, the manager and the operating model.
+- [Industries](/industries): Portal listing the 20 supported sectors.
+- [Insights](/insights): Articles on outsourcing, BPO and offshoring.
+- [Contact](/contact): Contact details, office locations and map.
+- [FAQ](/faq): Frequent questions about outsourcing to Madagascar.
+- [Careers](/careers): Recruiting and working at Optiline Mada.
+- [Request Information](/request-information): Three-step B2B brief form for a proposal.
+- [Request a Visit](/request-a-visit): On-site visit request in Antsirabe.
+
+## Proof
+
+- [Security & Compliance](/security-compliance): Confidentiality agreements, controlled access, continuity.
+- [Infrastructure](/infrastructure): 10 Gbps dual fiber, 3,000 workstations, 24/7 coverage.
+- [Case Studies](/case-studies): Sector, mission, volume, team size, duration, measured result.
 
 ## Industries
 
@@ -48,13 +68,3 @@ with additional languages available depending on the market.
 - [Education](/industries/education): Student administration and enrolment support.
 - [Legal & Paralegal Support](/industries/legal): Document preparation, research support, intake.
 - [Energy & Utilities](/industries/energy): Customer operations and field administration.
-- [Construction & Engineering](/industries/construction): Technical administration, procurement support.
-- [Media & Marketing](/industries/media-marketing): Digital operations, moderation, campaign administration.
-- [Food & Beverage](/industries/food-beverage): Order management and customer operations.
-- [HR & Recruitment Support](/industries/hr-recruitment): Sourcing assistance, interview scheduling, HR administration.
-
-## Optional
-
-- [Privacy Policy](/privacy-policy)
-- [Cookie Policy](/cookie-policy)
-- [Terms of Service](/terms)

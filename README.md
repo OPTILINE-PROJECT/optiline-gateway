@@ -1599,3 +1599,24 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Security & Operations
+
+- **Security headers**: set globally in `src/start.ts` (HSTS, CSP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-Frame-Options, COOP). CSP runs in Report-Only mode first; violations are collected by `/api/csp-report`. Flip `CSP_REPORT_ONLY` to `false` in `src/start.ts` once reports show no legitimate violation.
+- **Forms**: server-side validation (zod), CSRF middleware on all server functions, invisible honeypot field (`website`) rejected server-side, fixed recipient contact@optiline-mada.com.
+- **Secrets**: stored in the platform secret store, never in client code.
+- **HTTPS / TLS 1.2+ / HTTP→HTTPS redirect, WAF, encrypted daily backups**: managed by the hosting platform (Lovable / Cloudflare edge). Backup restoration is platform-side; contact the platform to perform a restore drill.
+- **Health check**: `GET /api/health` returns `{ status: "ok" }` for uptime monitoring.
+- **No CMS / back-office**: the site is fully static-rendered; there are no admin accounts, plugins or login pages to harden.
+
+## TODO (outside the code)
+
+- [ ] Google Business Profile for Optiline Mada (Antsirabe address).
+- [ ] LinkedIn company page, then add its URL to `site.social.linkedin` in `src/lib/site.ts`.
+- [ ] Crunchbase profile, then add it to the Organization JSON-LD `sameAs`.
+- [ ] Listings in offshoring / BPO directories.
+- [ ] SPF / DKIM / DMARC records for optiline-mada.com email deliverability.
+- [ ] Press relations / launch announcements.
+- [ ] Replace every visible `[TO BE COMPLETED: …]` marker with confirmed data.
+- [ ] Connect a cookieless analytics tool (Plausible or Umami) — load it only after the visitor's "Measurement" consent in the cookie module.
+- [ ] Add the calendar link for the "Book 30 minutes" call-to-action.

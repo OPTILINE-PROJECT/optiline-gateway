@@ -21,4 +21,8 @@ describe("form email delivery", () => {
     sendTemplateEmail.mockResolvedValue({ sent: false, reason: "recipient_suppressed" });
     expect(await invoke({ data: { source: "contact" } })).toEqual({ ok: false });
   });
+  it("silently drops bot submissions that fill the honeypot field", async () => {
+    expect(await invoke({ data: { source: "contact", website: "https://spam.example" } })).toEqual({ ok: true });
+    expect(sendTemplateEmail).not.toHaveBeenCalled();
+  });
 });

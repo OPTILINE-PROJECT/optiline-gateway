@@ -167,6 +167,29 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Optiline Mada",
+          url: "https://madagascar-talent-bridge.lovable.app/",
+          email: "contact@optiline-mada.com",
+          telephone: "+261 32 03 682 18",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Tomboarivo, 09 B 193, MAHAFALY",
+            addressLocality: "Antsirabe",
+            addressCountry: "MG",
+          },
+          areaServed: ["France", "Belgium", "Canada", "Mauritius", "Europe", "Worldwide"],
+          description:
+            "End-to-end outsourcing and managed teams in Madagascar: call center, IT development and back-office operations.",
+          priceRange: "From €590 / month per dedicated position",
+        }),
+      },
+    ],
   }),
   component: Index,
 });

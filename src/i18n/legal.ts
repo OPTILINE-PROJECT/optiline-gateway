@@ -102,6 +102,7 @@ const en: LegalLang = {
         h: "6. International transfers",
         b: [
           "Our teams are based in Madagascar and we work with clients in Europe and elsewhere, so your data may be processed outside your country of residence. Where this happens, we take appropriate measures to keep your data protected in line with applicable data protection rules.",
+          "In Madagascar, personal data is protected by Law No. 2014-038 on the protection of personal data, which governs all processing carried out by {name}. Where European prospects or clients are concerned, the EU General Data Protection Regulation (GDPR) also applies.",
         ],
       },
       {
@@ -314,6 +315,7 @@ const fr: LegalLang = {
         h: "6. Transferts internationaux",
         b: [
           "Nos équipes sont basées à Madagascar et nous travaillons avec des clients en Europe et ailleurs ; vos données peuvent donc être traitées en dehors de votre pays de résidence. Dans ce cas, nous prenons les mesures appropriées pour assurer leur protection conformément aux règles applicables en matière de protection des données.",
+          "À Madagascar, les données personnelles sont protégées par la loi n° 2014-038 relative à la protection des données à caractère personnel, qui encadre l'ensemble des traitements réalisés par {name}. Lorsque des prospects ou clients européens sont concernés, le Règlement général sur la protection des données (RGPD) s'applique également.",
         ],
       },
       {
@@ -526,6 +528,7 @@ const es: LegalLang = {
         h: "6. Transferencias internacionales",
         b: [
           "Nuestros equipos están en Madagascar y trabajamos con clientes en Europa y en otros lugares, por lo que sus datos pueden tratarse fuera de su país de residencia. En tal caso, adoptamos las medidas adecuadas para mantener sus datos protegidos conforme a las normas de protección de datos aplicables.",
+          "En Madagascar, los datos personales están protegidos por la Ley n.º 2014-038 sobre protección de datos de carácter personal, que rige todos los tratamientos realizados por {name}. Cuando se trata de clientes o clientes potenciales europeos, también se aplica el Reglamento General de Protección de Datos (RGPD) de la UE.",
         ],
       },
       {
@@ -738,6 +741,7 @@ const de: LegalLang = {
         h: "6. Internationale Datenübermittlung",
         b: [
           "Unsere Teams sitzen in Madagaskar und wir arbeiten mit Kunden in Europa und anderswo, sodass Ihre Daten außerhalb Ihres Wohnsitzlandes verarbeitet werden können. In diesem Fall treffen wir geeignete Maßnahmen, um Ihre Daten im Einklang mit den geltenden Datenschutzvorschriften zu schützen.",
+          "In Madagaskar werden personenbezogene Daten durch das Gesetz Nr. 2014-038 über den Schutz personenbezogener Daten geschützt, das für alle von {name} durchgeführten Verarbeitungen gilt. Für europäische Interessenten und Kunden gilt zusätzlich die EU-Datenschutz-Grundverordnung (DSGVO).",
         ],
       },
       {
@@ -950,6 +954,7 @@ const it: LegalLang = {
         h: "6. Trasferimenti internazionali",
         b: [
           "I nostri team hanno sede in Madagascar e lavoriamo con clienti in Europa e altrove, pertanto i vostri dati possono essere trattati al di fuori del vostro paese di residenza. In tal caso adottiamo misure adeguate per proteggere i vostri dati in conformità alle norme applicabili sulla protezione dei dati.",
+          "In Madagascar i dati personali sono protetti dalla Legge n. 2014-038 sulla protezione dei dati personali, che disciplina tutti i trattamenti effettuati da {name}. Per i potenziali clienti e i clienti europei si applica inoltre il Regolamento generale sulla protezione dei dati (GDPR) dell'UE.",
         ],
       },
       {
@@ -1162,6 +1167,7 @@ const pt: LegalLang = {
         h: "6. Transferências internacionais",
         b: [
           "As nossas equipas estão sediadas em Madagáscar e trabalhamos com clientes na Europa e noutros locais, pelo que os seus dados podem ser tratados fora do seu país de residência. Nesse caso, tomamos as medidas adequadas para manter os seus dados protegidos de acordo com as regras de proteção de dados aplicáveis.",
+          "Em Madagáscar, os dados pessoais são protegidos pela Lei n.º 2014-038 relativa à proteção de dados de caráter pessoal, que rege todos os tratamentos realizados por {name}. Quando estão em causa potenciais clientes ou clientes europeus, aplica-se igualmente o Regulamento Geral sobre a Proteção de Dados (RGPD) da UE.",
         ],
       },
       {
@@ -1374,6 +1380,7 @@ const nl: LegalLang = {
         h: "6. Internationale doorgifte",
         b: [
           "Onze teams zijn gevestigd in Madagaskar en wij werken met klanten in Europa en elders, waardoor uw gegevens buiten uw land van verblijf kunnen worden verwerkt. In dat geval nemen wij passende maatregelen om uw gegevens te beschermen in overeenstemming met de toepasselijke gegevensbeschermingsregels.",
+          "In Madagaskar worden persoonsgegevens beschermd door Wet nr. 2014-038 inzake de bescherming van persoonsgegevens, die van toepassing is op alle verwerkingen door {name}. Voor Europese prospects en klanten geldt bovendien de Algemene verordening gegevensbescherming (AVG) van de EU.",
         ],
       },
       {
@@ -1586,6 +1593,7 @@ const ar: LegalLang = {
         h: "6. عمليات النقل الدولية",
         b: [
           "فرقنا مقيمة في مدغشقر ونعمل مع عملاء في أوروبا وأماكن أخرى، لذا قد تُعالَج بياناتكم خارج بلد إقامتكم. وفي هذه الحالة نتخذ التدابير المناسبة لحماية بياناتكم وفق قواعد حماية البيانات المعمول بها.",
+          "في مدغشقر، تحمي البيانات الشخصية القانون رقم 2014-038 المتعلق بحماية المعطيات ذات الطابع الشخصي، والذي يحكم جميع عمليات المعالجة التي تجريها {name}. وعندما يتعلق الأمر بعملاء أو عملاء محتملين أوروبيين، تنطبق أيضًا اللائحة العامة لحماية البيانات (GDPR) الخاصة بالاتحاد الأوروبي.",
         ],
       },
       {
