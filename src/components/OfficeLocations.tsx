@@ -7,6 +7,7 @@ import { offices } from "@/lib/site";
 import map from "@/lib/office-map.json";
 
 const copy = {
+  he: { title: "המשרדים הבינלאומיים שלנו", map: "מיקומי המשרדים", open: "הצגת המיקום", country: "מדינה" },
   en: { title: "Our international offices", map: "Office locations", open: "View location", country: "Country" },
   fr: { title: "Nos bureaux internationaux", map: "Localisation des bureaux", open: "Voir la localisation", country: "Pays" },
   es: { title: "Nuestras oficinas internacionales", map: "Ubicación de las oficinas", open: "Ver ubicación", country: "País" },
@@ -19,6 +20,7 @@ const copy = {
 const pins = ["office-pin-antsirabe", "office-pin-silicon", "office-pin-miami", "office-pin-dubai", "office-pin-singapore", "office-pin-london", "office-pin-hongkong"];
 const flagCodes = ["MG", "US", "US", "AE", "SG", "GB", "HK"];
 const countries = {
+  he: ["מדגסקר", "ארצות הברית", "ארצות הברית", "איחוד האמירויות הערביות", "סינגפור", "הממלכה המאוחדת", "הונג קונג"],
   en: ["Madagascar", "United States", "United States", "United Arab Emirates", "Singapore", "United Kingdom", "Hong Kong SAR"],
   fr: ["Madagascar", "États-Unis", "États-Unis", "Émirats arabes unis", "Singapour", "Royaume-Uni", "Hong Kong"],
   es: ["Madagascar", "Estados Unidos", "Estados Unidos", "Emiratos Árabes Unidos", "Singapur", "Reino Unido", "Hong Kong"],

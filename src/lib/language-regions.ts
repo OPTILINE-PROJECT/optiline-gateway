@@ -446,13 +446,6 @@ export const languageRegions: LanguageRegion[] = [
     "label": "עברית"
   },
   {
-    "id": "IT-it-placeholder",
-    "countryCode": "IT",
-    "lang": "it",
-    "country": "Italy",
-    "label": "Italiano"
-  },
-  {
     "id": "IT-23-fr",
     "countryCode": "IT",
     "lang": "fr",
