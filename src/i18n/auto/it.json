@@ -1384,5 +1384,7 @@
   "startDate": "dataInizio",
   "summary_large_image": "riepilogo_immagine_grande",
   "twitter:card": "twitter:scheda",
-  "workingHours": "orarioDiLavoro"
+  "workingHours": "orarioDiLavoro",
+  "Continue": "Continua",
+  "Back": "Indietro"
 }

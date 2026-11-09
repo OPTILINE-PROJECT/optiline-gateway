@@ -1384,5 +1384,7 @@
   "startDate": "dateDeDébut",
   "summary_large_image": "résumé_grande_image",
   "twitter:card": "twitter:carte",
-  "workingHours": "horairesDeTravail"
+  "workingHours": "horairesDeTravail",
+  "Continue": "Continuer",
+  "Back": "Retour"
 }

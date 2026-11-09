@@ -732,5 +732,7 @@
   "startDate": "startdatum",
   "summary_large_image": "samenvatting_grote_afbeelding",
   "twitter:card": "twitter:kaart",
-  "workingHours": "werktijden"
+  "workingHours": "werktijden",
+  "Continue": "Doorgaan",
+  "Back": "Terug"
 }

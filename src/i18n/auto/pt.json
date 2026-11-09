@@ -732,5 +732,7 @@
   "startDate": "dataDeInício",
   "summary_large_image": "resumo_imagem_grande",
   "twitter:card": "twitter:cartão",
-  "workingHours": "horárioDeTrabalho"
+  "workingHours": "horárioDeTrabalho",
+  "Continue": "Continuar",
+  "Back": "Voltar"
 }
