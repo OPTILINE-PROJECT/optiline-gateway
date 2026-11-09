@@ -228,6 +228,7 @@
 .office-city-label-above { top: auto; bottom: 16px; }
 
 .form-actions { bottom: calc(var(--cookie-banner-height, 0px) + 12px); }
+.floating-contact { bottom: calc(var(--cookie-banner-height, 0px) + 20px); }
 .lead-form { padding-bottom: 10rem; }
 @media (max-width: 639px) {
   .lead-form input, .lead-form select, .lead-form textarea { font-size: 16px; }

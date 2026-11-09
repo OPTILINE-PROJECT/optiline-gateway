@@ -75,13 +75,14 @@ function RequestVisitPage() {
   return (
     <>
       <PageHero
+        compact
         eyebrow="Request a visit"
         title="Visit Our Facilities"
         intro="See the workspaces, the infrastructure and the working environment in person before you decide."
       />
 
       <div className="mx-auto max-w-6xl px-6">
-        <form onSubmit={onSubmit} className="lead-form min-w-0 max-w-2xl space-y-5 py-16 md:py-20">
+        <form onSubmit={onSubmit} className="lead-form min-w-0 max-w-2xl space-y-5 py-6 md:py-8">
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Name" htmlFor="name" required>
               <input id="name" name="name" required className={inputClass} />

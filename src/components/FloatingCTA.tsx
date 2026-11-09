@@ -1,12 +1,14 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
 export function FloatingCTA() {
   const { t } = useLanguage();
+  const { pathname } = useLocation();
+  if (["/contact", "/request-information", "/request-a-visit", "/careers"].includes(pathname)) return null;
 
   return (
-    <div className="fixed bottom-5 end-5 z-40 flex flex-col items-end gap-2">
+    <div className="floating-contact fixed end-5 z-40 flex flex-col items-end gap-2">
       {site.contact.whatsapp && (
         <a
           href={`https://wa.me/${site.contact.whatsapp}`}

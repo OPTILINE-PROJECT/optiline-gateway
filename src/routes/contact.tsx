@@ -52,13 +52,14 @@ function ContactPage() {
   return (
     <>
       <PageHero
+        compact
         eyebrow="Contact"
         title="Talk to Our Team"
         intro="Tell us about your project and we will come back to you with a concrete proposal."
       />
 
       <div className="mx-auto max-w-6xl px-6">
-        <section className="grid gap-10 py-16 md:grid-cols-12 md:py-20">
+        <section className="grid gap-8 py-6 md:grid-cols-12 md:py-8">
           <div className="min-w-0 md:col-span-5">
             <SectionHeading title="Contact details" className="mb-6" />
             <dl className="space-y-4 text-[14.5px]">

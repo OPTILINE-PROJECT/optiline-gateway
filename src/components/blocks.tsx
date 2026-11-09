@@ -81,13 +81,15 @@ export function PageHero({
   eyebrow,
   title,
   intro,
+  compact = false,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
+  compact?: boolean;
 }) {
   return (
-    <section className="section-wash-blue border-b border-border py-16 md:py-20">
+    <section className={`section-wash-blue border-b border-border ${compact ? "py-6 md:py-8" : "py-16 md:py-20"}`}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="animate-rise max-w-3xl">
           <Eyebrow>{eyebrow}</Eyebrow>

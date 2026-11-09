@@ -65,6 +65,7 @@ function CareersPage() {
   return (
     <>
       <PageHero
+        compact
         eyebrow="Careers"
         title="Join Optiline Mada"
         intro="We work with international clients and professional standards. If you want to grow in that environment, we would like to hear from you."
