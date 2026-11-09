@@ -1,7 +1,8 @@
+import { FormActions } from "@/components/FormActions";
 import { useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/blocks";
-import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
+import { Field, inputClass, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
@@ -80,7 +81,7 @@ function RequestVisitPage() {
       />
 
       <div className="mx-auto max-w-6xl px-6">
-        <form onSubmit={onSubmit} className="max-w-2xl space-y-5 py-16 md:py-20">
+        <form onSubmit={onSubmit} className="lead-form min-w-0 max-w-2xl space-y-5 py-16 md:py-20">
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Name" htmlFor="name" required>
               <input id="name" name="name" required className={inputClass} />
@@ -105,7 +106,7 @@ function RequestVisitPage() {
             <textarea id="message" name="message" rows={5} className={inputClass} />
           </Field>
           {failed && <FormSubmissionError />}
-                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Schedule a Visit"}</SubmitButton>
+                <FormActions busy={busy} action="Schedule a Visit" />
         </form>
       </div>
     </>

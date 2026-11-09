@@ -1,7 +1,8 @@
+import { FormActions } from "@/components/FormActions";
 import { useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import officeTeam from "@/assets/office-team.jpg";
-import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
+import { Field, inputClass, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
@@ -86,7 +87,7 @@ function RequestInformationPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-8 md:py-10">
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
-        <form onSubmit={onSubmit} className="space-y-4">
+        <form onSubmit={onSubmit} className="lead-form min-w-0 space-y-4">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue">Request information</p>
             <h1 className="mt-1 text-[clamp(1.5rem,2.6vw,2rem)] font-extrabold tracking-tight text-foreground">
@@ -101,7 +102,7 @@ function RequestInformationPage() {
             <legend className="mb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-blue">
               Contact information
             </legend>
-            <div className="grid items-end gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid min-w-0 items-end gap-3 grid-cols-2 xl:grid-cols-4">
               <Field label="First Name" htmlFor="firstName" required>
                 <input id="firstName" name="firstName" required className={inputClass} />
               </Field>
@@ -130,7 +131,7 @@ function RequestInformationPage() {
             <legend className="mb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-blue">
               Your project
             </legend>
-            <div className="grid items-end gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid min-w-0 items-end gap-3 grid-cols-2 xl:grid-cols-4">
               <Field label="Service Required" htmlFor="service" required>
                 <select id="service" name="service" required className={inputClass} defaultValue="">
                   <option value="" disabled>
@@ -183,13 +184,10 @@ function RequestInformationPage() {
             </div>
           </fieldset>
 
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <label className="flex items-start gap-3 text-[13px] text-muted-foreground">
-              <input type="checkbox" name="consent" required className="mt-0.5 size-4 accent-[var(--blue)]" />
-              <span>I agree to be contacted by Optiline Mada regarding my request.</span>
-            </label>
+          <div className="min-w-0">
+            
             {failed && <FormSubmissionError />}
-                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Request Information"}</SubmitButton>
+                <FormActions busy={busy} action="Request Information" />
           </div>
         </form>
 
