@@ -58,7 +58,7 @@ export function Header() {
         </div>
       </div>
       {open && (
-        <nav className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-6 py-4 xl:hidden">
+        <nav className="mobile-navigation overflow-y-auto border-t border-border bg-background px-6 py-4 xl:hidden">
           <ul className="space-y-1">
             {nav.map((item) => (
               <li key={item.to}>
