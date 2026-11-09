@@ -611,9 +611,6 @@ function Index() {
             <TrustStats />
           </div>
 
-          <p className="mt-6 text-[12.5px] text-muted-foreground">
-            Figures will be published once the official data is confirmed.
-          </p>
         </section>
 
         {/* COMMITMENTS (replace with real testimonials once approved) */}
