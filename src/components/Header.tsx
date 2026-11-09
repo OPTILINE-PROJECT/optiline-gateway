@@ -13,6 +13,7 @@ export function Header() {
     { to: "/", label: t("nav.home") },
     { to: "/solutions", label: t("nav.solutions") },
     { to: "/why-madagascar", label: t("nav.whyMadagascar") },
+    { to: "/pricing", label: t("nav.pricing") },
     { to: "/about", label: t("nav.about") },
     { to: "/industries", label: t("nav.industries") },
     { to: "/insights", label: t("nav.insights") },
