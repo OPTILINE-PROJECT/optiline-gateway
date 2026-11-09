@@ -12,12 +12,12 @@ import {
 export const Route = createFileRoute("/industries/$slug")({
   staticData: { sitemap: true },
   loader: ({ params }) => {
-    const industry = getIndustry(params.slug);
-    if (!industry) throw notFound();
-    return { industry };
+    if (!getIndustry(params.slug)) throw notFound();
+    return { slug: params.slug };
   },
-  head: ({ loaderData, params }) => {
-    if (!loaderData) {
+  head: ({ params }) => {
+    const industry = getIndustry(params.slug);
+    if (!industry) {
       return {
         meta: [
           { title: "Industry not found — Optiline Mada" },
@@ -25,7 +25,6 @@ export const Route = createFileRoute("/industries/$slug")({
         ],
       };
     }
-    const { industry } = loaderData;
     const url = `/industries/${params.slug}`;
     return {
       meta: [
@@ -70,7 +69,9 @@ export const Route = createFileRoute("/industries/$slug")({
 });
 
 function IndustryPage() {
-  const { industry } = Route.useLoaderData();
+  const { slug } = Route.useLoaderData();
+  const industry = getIndustry(slug);
+  if (!industry) return null;
   const Icon = industry.icon;
   const related = industries
     .filter((i) => i.slug !== industry.slug)
