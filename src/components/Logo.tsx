@@ -29,11 +29,11 @@ export function LogoMark({ inverted = false }: { inverted?: boolean }) {
 
 export function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
-    <Link to="/" className="group flex items-center" aria-label="Optiline Mada — home">
+    <Link to="/" className="group flex min-w-0 items-center" aria-label="Optiline Mada — home">
       <img
         src={logo}
         alt="Optiline Mada"
-        className={`h-16 w-auto transition-transform duration-300 group-hover:scale-105 ${
+        className={`h-auto max-h-16 w-auto max-w-full transition-transform duration-300 group-hover:scale-105 ${
           inverted ? "brightness-0 invert" : ""
         }`}
       />

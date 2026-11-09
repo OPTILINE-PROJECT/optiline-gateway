@@ -85,7 +85,7 @@ function IndustryPage() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Overview + photo */}
         <section className="grid items-start gap-10 py-16 md:grid-cols-[1.15fr_1fr] md:py-20">
-          <div>
+          <div className="min-w-0">
             <SectionHeading eyebrow="Overview" title={`How we work with ${industry.name}`} />
             <div className="mt-6 space-y-5">
               {industry.overview.map((p) => (
@@ -206,8 +206,8 @@ function IndustryPage() {
                 key={f.q.slice(0, 32)}
                 className="group rounded-xl border border-line bg-card px-5 py-4 open:border-accent/40"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold tracking-tight text-foreground marker:hidden">
-                  {f.q}
+                <summary className="grid grid-cols-[minmax(0,1fr)_auto] cursor-pointer list-none items-center gap-4 text-[15px] font-semibold tracking-tight text-foreground marker:hidden">
+                  <span className="min-w-0">{f.q}</span>
                   <span className="shrink-0 text-accent transition-transform group-open:rotate-45" aria-hidden>
                     +
                   </span>

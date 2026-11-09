@@ -1,9 +1,10 @@
+import { FormActions } from "@/components/FormActions";
 import { useState, type FormEvent } from "react";
 import { PhotoBanner } from "@/components/PhotoGallery";
 import { OfficeLocations } from "@/components/OfficeLocations";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeading } from "@/components/blocks";
-import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
+import { Field, inputClass, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { site } from "@/lib/site";
 
@@ -51,14 +52,15 @@ function ContactPage() {
   return (
     <>
       <PageHero
+        compact
         eyebrow="Contact"
         title="Talk to Our Team"
         intro="Tell us about your project and we will come back to you with a concrete proposal."
       />
 
       <div className="mx-auto max-w-6xl px-6">
-        <section className="grid gap-10 py-16 md:grid-cols-12 md:py-20">
-          <div className="md:col-span-5">
+        <section className="grid gap-8 py-6 md:grid-cols-12 md:py-8">
+          <div className="min-w-0 md:col-span-5">
             <SectionHeading title="Contact details" className="mb-6" />
             <dl className="space-y-4 text-[14.5px]">
               <div>
@@ -134,7 +136,7 @@ function ContactPage() {
             )}
           </div>
 
-          <div className="md:col-span-7">
+          <div className="order-first min-w-0 md:order-last md:col-span-7">
             {sent ? (
               <div className="rounded-2xl border border-accent/40 bg-accent/6 p-8">
                 <p className="text-[16px] leading-relaxed text-foreground">
@@ -142,7 +144,7 @@ function ContactPage() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={onSubmit} className="space-y-5">
+              <form onSubmit={onSubmit} className="lead-form min-w-0 space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Field label="Name" htmlFor="name" required>
                     <input id="name" name="name" required className={inputClass} />
@@ -160,12 +162,9 @@ function ContactPage() {
                 <Field label="Message" htmlFor="message" required>
                   <textarea id="message" name="message" rows={6} required className={inputClass} />
                 </Field>
-                <label className="flex items-start gap-3 text-[13.5px] text-muted-foreground">
-                  <input type="checkbox" name="consent" required className="mt-1 size-4 accent-[var(--blue)]" />
-                  <span>I agree to be contacted by Optiline Mada regarding my request.</span>
-                </label>
+                
                 {failed && <FormSubmissionError />}
-                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Send Message"}</SubmitButton>
+                <FormActions busy={busy} action="Send Message" />
               </form>
             )}
           </div>

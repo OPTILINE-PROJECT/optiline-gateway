@@ -1,8 +1,9 @@
+import { FormActions } from "@/components/FormActions";
 import { useState, type FormEvent } from "react";
 import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Pill, SectionHeading } from "@/components/blocks";
-import { Field, inputClass, SubmitButton, submitLead, FormSubmissionError } from "@/components/forms";
+import { Field, inputClass, submitLead, FormSubmissionError } from "@/components/forms";
 import { useLanguage } from "@/i18n/language";
 import { careerCategories } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -64,6 +65,7 @@ function CareersPage() {
   return (
     <>
       <PageHero
+        compact
         eyebrow="Careers"
         title="Join Optiline Mada"
         intro="We work with international clients and professional standards. If you want to grow in that environment, we would like to hear from you."
@@ -89,7 +91,7 @@ function CareersPage() {
               </p>
             </div>
           ) : (
-            <form onSubmit={onSubmit} className="max-w-2xl space-y-5">
+            <form onSubmit={onSubmit} className="lead-form min-w-0 max-w-2xl space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="Name" htmlFor="name" required>
                   <input id="name" name="name" required className={inputClass} />
@@ -117,7 +119,7 @@ function CareersPage() {
                 <textarea id="message" name="message" rows={5} className={inputClass} />
               </Field>
               {failed && <FormSubmissionError />}
-                <SubmitButton disabled={busy}>{busy ? "Sending…" : "Apply Now"}</SubmitButton>
+                <FormActions busy={busy} action="Apply Now" />
             </form>
           )}
         </section>
