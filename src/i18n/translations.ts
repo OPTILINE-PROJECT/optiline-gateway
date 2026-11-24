@@ -96,8 +96,8 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "cta.talkToTeam": "Parler à notre équipe",
     "cta.letsTalk": "Discutons",
     "cta.designSolution": "Concevoir ma solution",
-    "hero.title": "Votre équipe à Madagascar.",
-    "hero.titleAccent": "Entièrement gérée.",
+    "hero.title": "Vos employés à Madagascar :",
+    "hero.titleAccent": "3 fois moins chers que l'IA vocale, 2 fois plus d'appels aboutis.",
     "hero.subtitle":
       "Développez votre équipe à Madagascar sans la complexité. Optiline Mada met à votre disposition des professionnels qualifiés, des espaces de travail modernes, une technologie fiable et une gestion locale complète — le tout au même endroit.",
     "hero.badge1": "Expérience internationale",
