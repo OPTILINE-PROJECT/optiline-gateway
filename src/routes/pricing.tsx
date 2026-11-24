@@ -1,6 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CTASection, PageHero, SectionHeading } from "@/components/blocks";
 import { solutions } from "@/lib/content";
+import supportAgent from "@/assets/support-agent.jpg";
+import developers from "@/assets/developers.jpg";
+import backOffice from "@/assets/back-office.jpg";
+
+const servicePhotos: Record<string, { src: string; alt: string }> = {
+  "call-center": { src: supportAgent, alt: "Teleconsultant on a customer call" },
+  "it-development": { src: developers, alt: "Developers working together" },
+  "administrative-outsourcing": { src: backOffice, alt: "Administrative assistant handling back-office work" },
+};
 
 export const Route = createFileRoute("/pricing")({
   staticData: { sitemap: true },
@@ -68,8 +77,15 @@ function PricingPage() {
             {solutions.map((s) => (
               <div
                 key={s.slug}
-                className="flex flex-col rounded-xl border border-line bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-elevate"
+                className="flex flex-col overflow-hidden rounded-xl border border-line bg-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-elevate"
               >
+                <img
+                  src={servicePhotos[s.slug]?.src}
+                  alt={servicePhotos[s.slug]?.alt ?? s.title}
+                  loading="lazy"
+                  className="aspect-[16/10] w-full object-cover object-top"
+                />
+                <div className="flex flex-1 flex-col p-7">
                 <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-blue">{s.title}</p>
                 <p className="mt-4 text-[15px] text-muted-foreground">{s.priceProfile}</p>
                 <p className="mt-2 text-3xl font-extrabold tracking-tight text-foreground">{s.priceFrom}</p>
@@ -81,6 +97,7 @@ function PricingPage() {
                 >
                   See the service in detail →
                 </Link>
+                </div>
               </div>
             ))}
           </div>
