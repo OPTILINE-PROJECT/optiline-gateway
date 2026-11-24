@@ -33,7 +33,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "cta.designSolution": "תכנון הפתרון שלי",
     "hero.title": "העובדים שלכם במדגסקר:",
     "hero.titleAccent": "זולים פי 3 מ-AI קולי, פי 2 שיחות מוצלחות.",
-    "hero.subtitle": "בנו את הצוות שלכם במדגסקר ללא המורכבות. Optiline Mada מספקת אנשי מקצוע מיומנים, מרחבי עבודה מודרניים, טכנולוגיה אמינה וניהול מקומי מלא — הכול תחת קורת גג אחת.",
+    "hero.subtitle": "החום של קול אנושי, היעילות של צוות ייעודי. Optiline Mada מטפלת בהכול: גיוס, הכשרה, משרדים, טכנולוגיה וניהול שוטף. אתם מתרכזים בתוצאות שלכם.",
     "hero.badge1": "ניסיון בינלאומי",
     "hero.badge2": "תשתית אמינה",
     "hero.badge3": "ניהול מלא",
@@ -65,7 +65,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "Your employees in Madagascar:",
     "hero.titleAccent": "3 times cheaper than voice AI, 2 times more successful calls.",
     "hero.subtitle":
-      "Build your team in Madagascar without the complexity. Optiline Mada provides skilled professionals, modern workspaces, reliable technology and complete local management — all under one roof.",
+      "The warmth of a human voice, the efficiency of a dedicated team. Optiline Mada takes care of everything: recruitment, training, premises, technology and day-to-day management. You focus on your results.",
     "hero.badge1": "International Experience",
     "hero.badge2": "Reliable Infrastructure",
     "hero.badge3": "Fully Managed",
@@ -99,7 +99,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "Vos employés à Madagascar :",
     "hero.titleAccent": "3 fois moins chers que l'IA vocale, 2 fois plus d'appels aboutis.",
     "hero.subtitle":
-      "Développez votre équipe à Madagascar sans la complexité. Optiline Mada met à votre disposition des professionnels qualifiés, des espaces de travail modernes, une technologie fiable et une gestion locale complète — le tout au même endroit.",
+      "La chaleur d'une voix humaine, l'efficacité d'une équipe dédiée. Optiline Mada s'occupe de tout : recrutement, formation, locaux, technologie et gestion au quotidien. Vous vous concentrez sur vos résultats.",
     "hero.badge1": "Expérience internationale",
     "hero.badge2": "Infrastructure fiable",
     "hero.badge3": "Gestion complète",
@@ -133,7 +133,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "Sus empleados en Madagascar:",
     "hero.titleAccent": "3 veces más baratos que la IA de voz, 2 veces más llamadas concretadas.",
     "hero.subtitle":
-      "Cree su equipo en Madagascar sin complicaciones. Optiline Mada aporta profesionales cualificados, espacios de trabajo modernos, tecnología fiable y una gestión local completa, todo bajo un mismo techo.",
+      "La calidez de una voz humana, la eficacia de un equipo dedicado. Optiline Mada se ocupa de todo: contratación, formación, locales, tecnología y gestión diaria. Usted se concentra en sus resultados.",
     "hero.badge1": "Experiencia internacional",
     "hero.badge2": "Infraestructura fiable",
     "hero.badge3": "Gestión integral",
@@ -167,7 +167,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "Ihre Mitarbeiter in Madagaskar:",
     "hero.titleAccent": "3-mal günstiger als Sprach-KI, 2-mal mehr erfolgreiche Anrufe.",
     "hero.subtitle":
-      "Bauen Sie Ihr Team in Madagaskar ohne Komplexität auf. Optiline Mada stellt qualifizierte Fachkräfte, moderne Arbeitsplätze, zuverlässige Technik und ein vollständiges lokales Management bereit — alles aus einer Hand.",
+      "Die Wärme einer menschlichen Stimme, die Effizienz eines dedizierten Teams. Optiline Mada kümmert sich um alles: Rekrutierung, Schulung, Räumlichkeiten, Technik und tägliches Management. Sie konzentrieren sich auf Ihre Ergebnisse.",
     "hero.badge1": "Internationale Erfahrung",
     "hero.badge2": "Zuverlässige Infrastruktur",
     "hero.badge3": "Vollständig betreut",
@@ -201,7 +201,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "I tuoi dipendenti in Madagascar:",
     "hero.titleAccent": "3 volte meno cari dell'IA vocale, 2 volte più chiamate andate a buon fine.",
     "hero.subtitle":
-      "Crea il tuo team in Madagascar senza complessità. Optiline Mada mette a disposizione professionisti qualificati, spazi di lavoro moderni, tecnologia affidabile e una gestione locale completa, tutto in un unico luogo.",
+      "Il calore di una voce umana, l'efficienza di un team dedicato. Optiline Mada si occupa di tutto: reclutamento, formazione, locali, tecnologia e gestione quotidiana. Tu ti concentri sui tuoi risultati.",
     "hero.badge1": "Esperienza internazionale",
     "hero.badge2": "Infrastruttura affidabile",
     "hero.badge3": "Gestione completa",
@@ -235,7 +235,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "Os seus colaboradores em Madagáscar:",
     "hero.titleAccent": "3 vezes mais baratos do que a IA de voz, 2 vezes mais chamadas concretizadas.",
     "hero.subtitle":
-      "Construa a sua equipa em Madagáscar sem complexidade. A Optiline Mada disponibiliza profissionais qualificados, espaços de trabalho modernos, tecnologia fiável e gestão local completa — tudo num só lugar.",
+      "O calor de uma voz humana, a eficiência de uma equipa dedicada. A Optiline Mada trata de tudo: recrutamento, formação, instalações, tecnologia e gestão diária. Concentre-se nos seus resultados.",
     "hero.badge1": "Experiência internacional",
     "hero.badge2": "Infraestrutura fiável",
     "hero.badge3": "Gestão completa",
@@ -269,7 +269,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "Uw medewerkers in Madagaskar:",
     "hero.titleAccent": "3 keer goedkoper dan spraak-AI, 2 keer meer succesvolle gesprekken.",
     "hero.subtitle":
-      "Bouw uw team in Madagaskar zonder complexiteit. Optiline Mada levert gekwalificeerde professionals, moderne werkplekken, betrouwbare technologie en volledig lokaal management — alles onder één dak.",
+      "De warmte van een menselijke stem, de efficiëntie van een toegewijd team. Optiline Mada regelt alles: werving, opleiding, kantoorruimte, technologie en dagelijks beheer. U concentreert zich op uw resultaten.",
     "hero.badge1": "Internationale ervaring",
     "hero.badge2": "Betrouwbare infrastructuur",
     "hero.badge3": "Volledig beheerd",
@@ -303,7 +303,7 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     "hero.title": "موظفوكم في مدغشقر:",
     "hero.titleAccent": "أرخص بثلاث مرات من الذكاء الاصطناعي الصوتي، وضعف عدد المكالمات الناجحة.",
     "hero.subtitle":
-      "ابنِ فريقك في مدغشقر دون تعقيد. توفّر Optiline Mada كفاءات مؤهلة ومساحات عمل حديثة وتقنيات موثوقة وإدارة محلية متكاملة — كل ذلك تحت سقف واحد.",
+      "دفء الصوت البشري وكفاءة فريق مخصص. تتولى Optiline Mada كل شيء: التوظيف والتدريب والمكاتب والتقنية والإدارة اليومية. وأنتم تركّزون على نتائجكم.",
     "hero.badge1": "خبرة دولية",
     "hero.badge2": "بنية تحتية موثوقة",
     "hero.badge3": "إدارة كاملة",
