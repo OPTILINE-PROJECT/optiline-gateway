@@ -214,7 +214,7 @@ function Index() {
               <span className="text-border">•</span>
               <span className="text-muted-foreground">{t("hero.badge3")}</span>
             </div>
-            <h1 className="text-balance text-[clamp(2.6rem,6vw,4.4rem)] font-extrabold leading-[1.02] tracking-tight text-foreground">
+            <h1 className="text-balance text-[clamp(1.9rem,4.2vw,3.2rem)] font-extrabold leading-[1.08] tracking-tight text-foreground">
               {t("hero.title")} <span className="text-blue">{t("hero.titleAccent")}</span>
             </h1>
             <p className="mt-6 max-w-[46ch] text-pretty text-[17px] leading-relaxed text-muted-foreground">
