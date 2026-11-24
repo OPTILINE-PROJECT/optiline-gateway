@@ -1,10 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/i18n/language";
+import { cookieCopy } from "@/i18n/cookies";
+import { COOKIE_OPEN_EVENT } from "@/lib/cookie-consent";
 import { site } from "@/lib/site";
 import { Logo } from "./Logo";
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const cookies = cookieCopy(lang);
 
   return (
     <footer className="border-t-4 border-accent bg-navy text-navy-foreground">
@@ -106,6 +109,14 @@ export function Footer() {
         <div className="mx-auto max-w-6xl px-6 py-5 text-[12.5px] text-navy-foreground/50">
           <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
             <span>© 2026 Optiline Mada. All rights reserved.</span>
+            <button
+              type="button"
+              data-no-translate
+              onClick={() => window.dispatchEvent(new CustomEvent(COOKIE_OPEN_EVENT))}
+              className="text-navy-foreground/70 underline-offset-4 transition-colors hover:text-navy-foreground hover:underline"
+            >
+              {cookies.manage}
+            </button>
           </div>
         </div>
       </div>

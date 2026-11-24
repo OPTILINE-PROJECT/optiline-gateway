@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { CookiePreferences } from "@/components/CookiePreferences";
 import { cookieCopy } from "@/i18n/cookies";
-import { COOKIE_EVENT, COOKIE_KEY, noOptionalCookies, readCookieConsent, saveCookieConsent } from "@/lib/cookie-consent";
+import { COOKIE_EVENT, COOKIE_KEY, COOKIE_OPEN_EVENT, noOptionalCookies, readCookieConsent, saveCookieConsent } from "@/lib/cookie-consent";
 
 export function CookieBanner() {
   const { lang } = useLanguage();
@@ -32,6 +32,12 @@ export function CookieBanner() {
     return () => { window.removeEventListener(COOKIE_EVENT, sync); window.removeEventListener("storage", storage); };
   }, []);
 
+  useEffect(() => {
+    const open = () => setCustomise(true);
+    window.addEventListener(COOKIE_OPEN_EVENT, open);
+    return () => window.removeEventListener(COOKIE_OPEN_EVENT, open);
+  }, []);
+
   const decide = (accepted: boolean) => {
     saveCookieConsent(accepted ? { analytics: true, marketing: true } : noOptionalCookies);
     setVisible(false);
@@ -48,7 +54,7 @@ export function CookieBanner() {
             <Button variant="outline" onClick={() => setCustomise(true)}>{c.customise}</Button>
           </div>
         </div>
-      </section> : <span ref={banner} className="fixed bottom-4 start-4 z-40 block max-w-[calc(100vw-8rem)]"><Button variant="outline" className="h-auto min-h-9 whitespace-normal bg-card text-xs" data-no-translate onClick={() => setCustomise(true)}>{c.settings}</Button></span>}
+      </section> : null}
       <Dialog open={customise} onOpenChange={setCustomise}>
         <DialogContent className="max-h-[90dvh] w-[calc(100%-2rem)] overflow-y-auto bg-card" data-no-translate>
           <DialogTitle>{c.title}</DialogTitle>

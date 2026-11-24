@@ -16,7 +16,6 @@ import { LanguageProvider } from "@/i18n/language";
 import { AutoTranslate } from "@/i18n/AutoTranslate";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
 import { CookieBanner } from "@/components/CookieBanner";
 
 function NotFoundComponent() {
@@ -161,7 +160,6 @@ function RootComponent() {
           </main>
           <Footer />
         </div>
-        <FloatingCTA />
         <CookieBanner />
       </LanguageProvider>
     </QueryClientProvider>

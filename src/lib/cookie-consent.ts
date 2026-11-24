@@ -1,5 +1,6 @@
 export const COOKIE_KEY = "optiline-cookie-consent";
 export const COOKIE_EVENT = "optiline-cookie-change";
+export const COOKIE_OPEN_EVENT = "optiline-cookie-open";
 export const CONSENT_VERSION = 1;
 export const CONSENT_MAX_AGE = 180 * 24 * 60 * 60 * 1000;
 export type CookieChoices = { analytics: boolean; marketing: boolean };
