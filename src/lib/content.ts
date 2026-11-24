@@ -52,7 +52,7 @@ export const solutions: Solution[] = [
     title: "Call Center & Customer Operations",
     short: "Customer service, sales and support teams operating to international standards.",
     priceProfile: "Dedicated teleconsultant",
-    priceFrom: "From €690 / month",
+    priceFrom: "From €890 / month",
     intro:
       "Dedicated customer operations teams in Madagascar — recruited, trained, equipped and supervised by Optiline Mada, working with your processes and your tools.",
     items: [

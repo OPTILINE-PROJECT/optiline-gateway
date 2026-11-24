@@ -10,7 +10,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Starting prices for dedicated, fully managed positions in Madagascar: teleconsultant from €690 / month, developer from €1,290 / month, administrative assistant from €590 / month.",
+          "Starting prices for dedicated, fully managed positions in Madagascar: teleconsultant from €890 / month, developer from €1,290 / month, administrative assistant from €590 / month.",
       },
       { property: "og:title", content: "Pricing — Optiline Mada" },
       {
@@ -54,7 +54,7 @@ function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         title="Transparent Starting Prices"
-        intro="In brief: a dedicated teleconsultant starts at €690 per month, a dedicated developer at €1,290 per month and a dedicated administrative assistant at €590 per month. Each price covers a fully managed position — workspace, equipment, connectivity and local supervision included. Your final proposal is prepared specifically for your project, based on profiles, team size and working hours."
+        intro="In brief: a dedicated teleconsultant starts at €890 per month, a dedicated developer at €1,290 per month and a dedicated administrative assistant at €590 per month. Each price covers a fully managed position — workspace, equipment, connectivity and local supervision included. Your final proposal is prepared specifically for your project, based on profiles, team size and working hours."
       />
 
       <div className="mx-auto max-w-6xl px-6">

@@ -11,8 +11,8 @@ export function Footer() {
 
   return (
     <footer className="border-t-4 border-accent bg-navy text-navy-foreground">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-12">
-        <div className="md:col-span-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 px-6 py-14 sm:grid-cols-3 lg:grid-cols-12">
+        <div className="col-span-2 sm:col-span-3 lg:col-span-4">
           <div className="mb-4">
             <Logo inverted />
           </div>
@@ -39,8 +39,8 @@ export function Footer() {
           )}
         </div>
 
-        <div className="md:col-span-3">
-          <p className="mb-4 text-[11px] uppercase tracking-[0.16em] text-accent">
+        <div className="min-w-0 lg:col-span-2">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.12em] text-accent break-normal [overflow-wrap:normal]">
             {t("footer.solutions")}
           </p>
           <ul className="space-y-2.5 text-[14px]">
@@ -66,8 +66,8 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-2">
-          <p className="mb-4 text-[11px] uppercase tracking-[0.16em] text-accent">
+        <div className="min-w-0 lg:col-span-2">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.12em] text-accent break-normal [overflow-wrap:normal]">
             {t("footer.company")}
           </p>
           <ul className="space-y-2.5 text-[14px]">
@@ -82,8 +82,8 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-2">
-          <p className="mb-4 text-[11px] uppercase tracking-[0.16em] text-accent">
+        <div className="min-w-0 lg:col-span-2">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.12em] text-accent break-normal [overflow-wrap:normal]">
             {t("footer.resources")}
           </p>
           <ul className="space-y-2.5 text-[14px]">
@@ -94,8 +94,8 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-1">
-          <p className="mb-4 text-[11px] uppercase tracking-[0.16em] text-accent">
+        <div className="min-w-0 lg:col-span-2">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.12em] text-accent break-normal [overflow-wrap:normal]">
             {t("footer.legal")}
           </p>
           <ul className="space-y-2.5 text-[14px]">
